@@ -1,0 +1,169 @@
+@font-face {
+    font-family: "Lexend";
+    src: url(../fonts/Lexend-VariableFont_wght.ttf);
+}
+
+:root {
+    --main: #191A19;
+    --main100:#535353;
+    --main500:#363736;
+    --secondary: #1E5128;
+    --secondary100:#567d5e;
+    --secondary500:#3a6743;
+    --tertiary: #4E9F3D;
+    --tertiary100:#7ab76e;
+    --tertiary500:#64ab55;
+    --accent: rgba(207, 207, 207, 0.9);
+
+    --pfp-border-radius: 64px;
+    --h1-underline: 5px;
+}
+
+body {
+    background-color: var(--main);
+    color: var(--accent);
+    font-family:"Lexend", sans-serif;
+    line-height: 1.5em;
+}
+
+
+/*
+2 for the same thing, but mr moz-selection is a crybaby and breaks the css if put with selection.
+*/
+::-moz-selection {
+    color: var(--accent);
+    background-color: var(--secondary);
+}
+
+::selection {
+    color: var(--accent);
+    background-color: var(--secondary);
+}
+
+
+/* ==== [ Header ] ==== */
+
+header {
+    font-size: 1.25em;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+header a img {
+    max-height: 75px;
+    max-width: 75px;
+    border-radius: var(--pfp-border-radius);
+    margin: 0 10px;
+}
+
+
+
+header a {
+    color: var(--accent);
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+header nav ul li {
+    list-style-type:none;
+    padding: 0 10px;
+}
+
+header nav ul li a {
+    transition: .3s;
+    color: var(--secondary);
+}
+
+header nav ul li a:hover {
+    transition: .3s;
+    color: var(--tertiary);
+}
+
+header nav ul li a#active {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--secondary100);
+    color: var(--tertiary);
+    transition: .3s;
+}
+
+header nav ul li a#active:hover {
+    text-decoration-color: var(--tertiary100);
+}
+
+/* Main */
+
+main {
+    display: flex;
+    min-height: 85vh;
+    flex-direction: column;
+    padding: 0 10%;
+}
+
+main a {
+    color: var(--accent);
+    transition: .3s;
+}
+
+main a:hover {
+    color: var(--tertiary);
+    transition: .3s;
+}
+
+main code {
+    color: var(--secondary);
+    font-family: sans-serif;
+    background-color: var(--tertiary100);
+    border-radius: 10px;
+    padding: 1px 5px;
+}
+
+main u {
+    text-decoration-color: var(--secondary500);
+    text-decoration-thickness: 3px;
+}
+
+main  h1 {
+    text-decoration: underline;
+    text-decoration-thickness: var(--h1-underline);
+    text-decoration-color: var(--tertiary);
+}
+
+
+
+.placeholderDiv {
+    display: flex;
+    flex: 1;
+}
+
+/* ==== [ Footer ] ==== */
+
+footer a {
+    color: var(--main100);
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: .3s;
+}
+
+footer a:hover {
+    color: var(--tertiary);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    transition: .3s;
+}
+
+footer #links {
+    text-align: center;
+    font-size: 1em;
+}
