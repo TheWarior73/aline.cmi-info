@@ -83,6 +83,6 @@ main #icons a:hover figure svg{
     transition: .3s;
 }
 
-main #icons a figure#figureLeft {
+main #icons a figure{
     margin-left: 0;
 }
