@@ -1,0 +1,75 @@
+/* Main */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+
+h1 {
+    color: wheat;
+}
+
+/* Accueil */
+
+#div_accueil {
+    background: teal;
+    width: 50%;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 42px auto 0 auto;
+}
+
+#liens a {
+    color: white;
+    text-decoration: none;
+}
+
+#liens a:hover {
+    color: wheat;
+}
+
+/* Cartes Films */
+
+#carte_film {
+    background-color: teal;
+    color: white;
+    width: 50%;
+    border-radius: 1em;
+    padding: 10px;
+    margin: auto;
+}
+
+
+#carte_film img {
+    width: 25%;
+    float: left;
+    margin-right: 10px;
+    clear: both;
+}
+
+
+#carte_film footer {
+    color: black;
+    text-align: center;
+}
+
+#carte_film #synopsis p {
+    text-align: justify;
+}
+
+/* Retour accueil */
+
+#retour {
+    margin-bottom: 10px;
+}
+
+#retour a {
+    background-color: teal;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+#retour a:hover {
+    color: wheat;
+}

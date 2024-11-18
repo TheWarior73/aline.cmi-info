@@ -17,6 +17,8 @@
 
     --pfp-border-radius: 64px;
     --h1-underline: 5px;
+    --h2-underline: 3px;
+    --h3-underline: 2px;
 }
 
 body {
@@ -102,8 +104,36 @@ header nav ul li a#active:hover {
     text-decoration-color: var(--tertiary100);
 }
 
-/* Main */
+/* ==========[ Main ]========== */
 
+/* NAVIGATION */
+main ul.navigation li {
+    list-style-type: none;
+}
+
+main ul.navigation li a {
+    color: var(--secondary);
+    text-decoration-color: var(--secondary);
+    text-decoration-thickness: var(--h2-underline);
+}
+
+main ul.navigation li a:hover {
+    color: var(--accent);
+    text-decoration-color: var(--tertiary);
+}
+
+main ul.navigation li a#active {
+    color: var(--tertiary);
+    text-decoration-color: var(--tertiary);
+}
+
+main ul.navigation li a#active:hover {
+    text-decoration-color: var(--accent);
+}
+
+
+
+/* End Nav */
 main {
     display: flex;
     min-height: 85vh;
@@ -138,6 +168,18 @@ main  h1 {
     text-decoration: underline;
     text-decoration-thickness: var(--h1-underline);
     text-decoration-color: var(--tertiary);
+    transition: .3s;
+}
+
+main h2 a {
+    text-decoration-color: var(--tertiary);
+    transition: .3s;
+    text-decoration-thickness: var(--h1-underline);
+}
+
+main h2 a:hover {
+    text-decoration-color: var(--accent);
+    transition: .3s;
 }
 
 
