@@ -182,7 +182,9 @@ main h2 a:hover {
     transition: .3s;
 }
 
-
+#pagesNav {
+    margin-bottom: 0;
+}
 
 .placeholderDiv {
     display: flex;

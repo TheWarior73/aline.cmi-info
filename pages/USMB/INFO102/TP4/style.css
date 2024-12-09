@@ -1,0 +1,56 @@
+body {
+    font-family: calibri;
+    background-color: #ddd;
+    text-align: justify ;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+cite a::before {
+    content: url("images/lien.png");
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 13px;
+}
+
+input::placeholder {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#payement {
+    display: flex;
+    justify-content: space-between;
+}
+
+#block {
+    background-color: #bbb;
+    border-radius: 10px;
+    flex: 1;
+    margin: 5px;
+}
+
+fieldset {
+    border-color: black;
+    border-width: 1px;
+    margin: 10px;
+}
+
+#suprImg {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+form {
+    background-image: url("");
+    background-size: cover;
+}

@@ -1,0 +1,56 @@
+body, #dessin, #couleurs, #traits {
+	background-color: #bbb;
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+}
+
+#couleurs {
+	order: -1;
+	
+}
+
+#dessin {
+	border: 1px solid #666;
+	margin: 10px;
+}
+
+#couleurs, #traits {
+	display: flex;
+	flex-direction: column;
+}
+
+.couleur, .trait {
+	border-radius: 5px;
+	border: 2px none;
+	margin-bottom: 5px;
+}
+
+.couleur:hover, .trait:hover {
+	background-color: #ccc;
+	border: 2px solid #ddd;
+}
+
+#zone {
+	display: flex;
+	flex-direction: column;
+	align-items: center
+}
+
+p {
+	background-color: #666;
+	color: white;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0;
+	transition: .3s;
+}
+
+p:hover {
+	background-color: #aaa;
+	color: black;
+	transition: .3s;
+	cursor: pointer;
+}

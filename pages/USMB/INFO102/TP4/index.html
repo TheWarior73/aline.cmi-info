@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script async src="script.js"></script>
+    <title>CC4</title>
+</head>
+<body>
+    <h1>Pour avoir 20/20 sortez la carte bancaire !</h1>
+    <div id="payement">
+        <div id="block">
+            <form action="">
+            <h2>Informations de paiement</h2>
+            <fieldset>
+                <div>
+                    Type de carte 
+                    <input type="radio" name="carte" id="cb" > <label for="Cb" class="lcarte"><img src="images/CB.png" alt="CB"></label>
+
+                    <input type="radio" name="carte" id="mc"> <label for="mc" class="lcarte"><img src="images/mastercard.png" alt="Mastercard"></label>
+
+                    <input type="radio" name="carte" id="visa"> <label for="Vs" class="lcarte"><img src="images/visa.png" alt="Visa"></label>
+                </div><br>
+                <div>
+                    Numéro de la carte :
+                    <input type="number" placeholder="Numéro">
+                </div><br>
+
+                <div>
+                    Date d'expiration :
+                    <input type="text" placeholder="MM/AA">
+                </div><br>
+
+                <div>
+                    Code de sécurité :
+                    <input type="text" placeholder="CVV">
+                </div><br>
+
+                <div>
+                    Titulaire de la carte :
+                    <input type="text" placeholder="Prénom Nom">
+                </div><br>
+            </fieldset>
+            </form>
+        </div>
+
+        <div id="block">
+            <h2>Confirmation</h2>
+            <form action="">      
+            <fieldset>
+                <div>
+                    <input type="checkbox">
+                    <label for="accept">J'accepte les <a href="">CGV</a></label>
+                </div><br>
+
+                <div>
+                    <input type="submit" value="payer">
+                </div>
+            </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <h1>Les nouvelles balises HTML5</h1>
+
+        <cite>
+            <a href="https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Source</a>
+        </cite>
+
+        <p>De même que HTML est utilisé pour définir les diverses parties indépendantes d'une page (comme un « paragraphe » ou une « image »), HTML l'est pour définir des zones de votre site web (comme l'« en‑tête », le « menu de navigation », le « contenu principal », etc.). Cet article détaille la structure d'un site simple et l'écriture du HTML correspondant.</p>
+        <p>Pour mettre en oeuvre le marquage sémantique, HTML fournit des balises dédiées que vous pourrez utiliser pour présenter ces parties, par exemple :</p>
+        <ul>
+            <li><strong>header :</strong> <code>&ltheader&gt</code></li>
+            <li><strong>bare de navigation :</strong> <code>&ltnav&gt</code></li>
+            <li><strong>contenu principal :</strong> <code>&ltmain&gt</code> avec diverses sous-sections de contenu représentées à l'aide des elements <code>&ltarticle&gt</code>, <code>&ltsection&gt</code> et <code>&ltdiv&gt</code></li>
+            <li><strong>barre latérale :</strong> <code>&ltaside&gt</code>souvent mise a l'intérieur de l'élément <code>&ltmain&gt</code></li>
+            <li><strong>pied de page :</strong> <code>&ltfooter&gt</code></li>
+        </ul>
+    
+        <p>
+            <button id="suprImg">Supprimer les images</button>
+        </p>
+    </div>
+
+    <footer>
+        <a href="../index.html" style="text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: forestgreen;">Retour Menu</a>
+    </footer>
+</body>
+</html>

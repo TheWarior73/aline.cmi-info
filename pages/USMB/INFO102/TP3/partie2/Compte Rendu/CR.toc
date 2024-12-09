@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Casse-Briques}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Créer l'élément Canvas et l'afficher}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Déplacer la balle}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Rebondir contre les murs}{3}{}%
+\contentsline {subsection}{\numberline {1.4}Contrôles de clavier}{3}{}%
+\contentsline {subsection}{\numberline {1.5}Game Over}{4}{}%
+\contentsline {subsection}{\numberline {1.6}Mur de briques}{4}{}%
+\contentsline {subsection}{\numberline {1.7}Détection de collisions}{4}{}%
+\contentsline {subsection}{\numberline {1.8}Affichage du score et fin de partie (gagné)}{5}{}%
+\contentsline {subsection}{\numberline {1.9}Contrôles de la souris}{5}{}%
+\contentsline {subsection}{\numberline {1.10}Fin}{6}{}%

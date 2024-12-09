@@ -1,0 +1,116 @@
+:root {
+    --border-radius: 5px;
+}
+
+body {
+    background-image: url("img/oceanBackground.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+::selection {
+    background-color:#6a9ab0;
+    color: rgb(0, 31, 63);
+}
+
+
+
+
+/* Body Link Ocean */
+#bodylinkocean {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+#humain, #ocean {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+/* ICONS */
+#bodylinkocean #humain #icons li, #bodylinkocean #ocean #icons li {
+    padding-left: .5em;
+}
+
+#bodylinkocean #humain #icons li img:hover {
+    cursor: pointer;
+}
+
+/* HUMAIN */
+#humain {
+    background-color: rgba(0, 31, 63, 0.7);
+}
+
+
+
+/* OCEAN */
+#ocean {
+    background-color: rgba(58, 109, 140, 0.7);
+}
+
+
+
+#icons {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+#icons img {
+    transition: .3s;
+    border-radius: 2em;
+    padding: .1em;
+}
+
+#ocean #icons img {
+    background-color: rgba(0, 31, 63, 0.7);
+}
+
+#humain #icons img {
+    background-color: rgba(58, 109, 140, 0.7);
+}
+
+#humain #icons img:hover, #humain .selected {
+    background-color: rgba(0, 31, 63, 0.7) !important;
+    border-radius: 1em !important;
+    transition: .3s !important;
+}
+
+#ocean #icons img:hover, #ocean .selected {
+    background-color: rgba(58, 109, 140, 0.7) !important;
+    border-radius: 1em !important;
+    transition: .3s !important;
+}
+
+#ocean_text, #humain_text {
+    color: aliceblue;
+    padding-left: .2em;
+    padding-right: .2em;
+    text-align: justify;
+}
+
+#swap {
+    min-width: 50px;
+    min-height: 50px;
+
+    background-color: rgba(58, 109, 140, 0.7);
+    border-radius: 2em;
+}
+
+#swap2 {
+    min-width: 50px;
+    min-height: 50px;
+
+    background-color: rgba(0, 31, 63, 0.7);
+    border-radius: 2em;
+
+    transform: rotate(180deg);
+}
