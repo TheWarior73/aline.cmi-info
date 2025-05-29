@@ -1,0 +1,67 @@
+.semestre {
+    background: var(--secondary500);
+    border-radius: 16px;
+    margin: 0 -15px;
+}
+
+.module {
+    background-color: var(--secondary100);
+    
+    border-radius: 16px;
+    overflow: clip;
+
+    margin: 5px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.module p {
+    margin: 5px 0;
+}
+
+#ModNum {
+    width: fit-content;
+    
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+    padding: 2px 15px;
+    margin: 0 0 5px 0;
+
+    background-color: var(--secondary);
+}
+
+#ModTitle {
+    margin: -5px 0 5px 0;
+    width: fit-content;
+    
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+
+    padding: 2px 15px;
+
+    background-color: var(--tertiary500);
+    color: var(--main);
+}
+
+#section {
+    background-color: var(--secondary);
+    margin: 5px 0;
+    padding: 5px 15px;
+
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.module input {
+    border-radius: 16px;
+    border: none;
+
+    padding: 0 15px;
+    height: 25px;
+    width: 250px;
+}

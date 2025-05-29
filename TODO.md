@@ -5,11 +5,13 @@
 
 # REWORK
 
-- Projects (Sub)Navbar
+- Navbar in projects and Misc stuff
 
 
 # REDO
 
+- Be consistent with language
 
 # TODO
-- Misc stuff (page)
+
+- Localize
