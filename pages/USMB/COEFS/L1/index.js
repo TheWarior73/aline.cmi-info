@@ -126,11 +126,141 @@ const S1 = [
 ];
 
 const S2 = [
-    
+    {
+        "option" : false,
+        "titre" : "MATH204",
+        "module" : "MATHS",
+        "titre_long" : "Algèbre 2",
+        "notes" : {
+            "CM_CC1" : 1.2,
+            "CM_CC2" : 1.2,
+            "TD" : 0.45,
+            "TP": 0.15,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "ETRS201",
+        "module" : "ETRS",
+        "titre_long" : "Réseaux informatiques et internet",
+        "notes" : {
+            "CM" : 2.1,
+            "TP_CC" : 0.297,      
+            "TP_CT" : 0.603,  
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "ETRS202",
+        "module" : "ETRS",
+        "titre_long" : "Electronique programmable",
+        "notes" : {
+            "CM" : -1,
+            "TP" : -1,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "INFO201",
+        "module" : "INFO",
+        "titre_long" : "Systèmes d'exploitation",
+        "notes" : {
+            "CM" : -1,
+            "TP" : -1,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "INFO202",
+        "module" : "INFO",
+        "titre_long" : "Programmation et algorithmique",
+        "notes" : {
+            "CM_CC1" : -1 ,
+            "CM_CC2" : -1 ,
+            "CM_CC3" : -1 ,
+            "TP" : -1 ,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "INFO203",
+        "module" : "INFO",
+        "titre_long" : "Languages du Web 2",
+        "notes" : {
+            "CM_CC1" : -1 ,
+            "CM_CC2" : -1 ,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "INFO205",
+        "module" : "INFO",
+        "titre_long" : "Mathématiques pour le numérique 2",
+        "notes" : {
+            "CM_CT" : 2.4,
+            "TP_CC" : 0.6,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "ANGL201",
+        "module" : "MOD",
+        "titre_long" : "Anglais SceM",
+        "notes" : {
+            "TD" : -1 ,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "AIPE201",
+        "module" : "MOD",
+        "titre_long" : "Orientation et métiers",
+        "notes" : {
+            "CM" : 0.25,
+            "TD" : 0.25,
+            "TD EFA" : 0.25,
+            "AUTO" : 0.25,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "OPTION",
+        "module" : "OPTION",
+        "titre_long" : "Nutrition / Conférences / sport",
+        "notes" : {
+            "CM" : 0.25,
+            "TD" : 0.25,
+            "TD EFA" : 0.25,
+            "AUTO" : 0.25,
+        }
+    },
+
+
+    {
+        "option" : true,
+        "titre" : "INFO204",
+        "module" : "INFO",
+        "titre_long" : "Projet multidisciplinaire",
+        "notes" : {
+            "TP" : -1 ,
+        }
+    },
+    {
+        "option" : true,
+        "titre" : "MATH202",
+        "module" : "MATHS",
+        "titre_long" : "Analyse",
+        "notes" : {
+            "CM_CC1" : 2.25,
+            "CM_CC1" : 2.25,
+            "TD_CC1" : 0.45,
+            "TD_CC2" : 0.45,
+            "TD_CC3" : 0.45,
+        }
+    },
 ];
 
-var moyenne = -1;
-var moyenne_par_modules = [];
+var moyenneG;
 
 // ONLOAD
 
@@ -168,9 +298,7 @@ function html_semestre(modules, semestre_nb) {
     }
 
     // finalement on ajoute un bouton pour calculer
-    let bouton = document.createElement("button");
-    bouton.innerHTML = "Calculer la moyenne";
-    bouton.addEventListener("click", calcule_moyenne);
+    bouton = bouton_html()
     semestre.appendChild(bouton);
 } 
 
@@ -216,6 +344,21 @@ function html_note(nom_note, coef) {
     return div_note;
 }
 
+function bouton_html() {
+    let div_bouton = document.createElement("div");
+    div_bouton.className = "bouton"
+    
+    let bouton = document.createElement("button");
+    bouton.innerHTML = "Calculer la moyenne";
+    bouton.addEventListener("click", calcule_moyenne);
+    
+    let para = document.createElement("p");
+    para.innerHTML = "Moyenne : N/A";
+
+    div_bouton.appendChild(bouton);
+    div_bouton.appendChild(para)
+    return div_bouton;
+}
 
 // CALCULS MOYENNES
 
@@ -227,8 +370,6 @@ function html_note(nom_note, coef) {
 function calcule_moyenne(event) {
     let parent = event.target.parentNode;
     let childs = parent.childNodes;
-    let notes;
-
 
     // on récupère les modules
     let modules = get_modules(childs);
@@ -239,7 +380,8 @@ function calcule_moyenne(event) {
         // on verifie si il y a une note, sinon on ne la garde pas
         let NotesAGarder = keep_notes(sections);
         if (NotesAGarder.length != 0) { // il y a une ou plusieures notes dans le module.
-
+            let moyenne_module = calcule_module(NotesAGarder);
+            update_module(moyenne_module, modules[i])
         }
     }
 }
@@ -278,4 +420,35 @@ function keep_notes(inputs) {
         }
     }
     return notes_remplies;
+}
+
+
+function calcule_module(liste_notes) {
+    //on parcourt la liste des notes
+    let coeff = 0.0;
+    let notes = 0.0;
+    
+    for (let i=0; i<liste_notes.length; i++) {
+        // value == note
+        // class == coeff
+        let temp_val = parseFloat(liste_notes[i].value)
+        if (temp_val > 20) {
+            temp_val = 20.0;
+            console.log("Valeur reçue supérieure a 20, abaissement a 20/20")
+        }
+        
+        // calcul & ajout moy module
+        coeff = coeff + parseFloat(liste_notes[i].className)
+
+        // notes + (note * coeff)
+        notes = notes + (temp_val * parseFloat(liste_notes[i].className))
+    }
+    let moyenne = notes/coeff
+    return moyenne
+}
+
+function update_module(moyenne, module) {
+
+    let moyenne_html = module.querySelector("#moyenne")
+    moyenne_html.innerHTML = "Moyenne : " + moyenne
 }
