@@ -592,6 +592,7 @@ function html_onload() {
 // HTML CONSTRUCTOR
 function html_semestre(modules, semestre_nb) {
     let semestre = document.querySelector(semestre_nb); // semestre : ".un" ou ".deux"
+    console.log(semestre)
 
     let liste_options = [];
 
@@ -826,12 +827,14 @@ function update_moyenneG(elt, moyenne, nb_notes) {
                 <p>
                     Calcul semestre 1, les options se trouvent a la fin du formulaire
                 </p>
+            </div>
 
             <div class="deux">
                 <h2 id="s2">Semestre 2</h2>
                 <p>
                     Calcul semestre 2, les options se trouvent a la fin du formulaire
                 </p>
+            </div>
         </div>
 
     </main>
