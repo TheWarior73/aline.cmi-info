@@ -251,13 +251,12 @@ const S2 = [
         "titre_long" : "Analyse",
         "notes" : {
             "CM_CC1" : 1.2,
-            "CM_CC1" : 1.2,
+            "CM_CC2" : 1.2,
             "TD" : 0.6,
         }
     },
 ];
 
-var moyenneG;
 
 // ONLOAD
 
@@ -365,7 +364,13 @@ function bouton_html() {
  * (note0 * coeff0) + (note1 * coeff1) + ... + (noteN * coeffN) / (coeff0 + coeff1 + ... + coeffN)
  */
 function calcule_moyenne(event) {
-    let parent = event.target.parentNode;
+    let div_parent = event.target.parentNode;
+    let parent = div_parent.parentNode;
+
+    let html_moyenneG = div_parent.childNodes[1]; // p moyenne G
+    let moyenneG = 0.0;
+    let nb_modules = 0;
+
     let childs = parent.childNodes;
 
     // on récupère les modules
@@ -377,10 +382,14 @@ function calcule_moyenne(event) {
         // on verifie si il y a une note, sinon on ne la garde pas
         let NotesAGarder = keep_notes(sections);
         if (NotesAGarder.length != 0) { // il y a une ou plusieures notes dans le module.
-            let moyenne_module = calcule_module(NotesAGarder);
-            update_module(moyenne_module, modules[i])
+            let moy_module = calcule_module(NotesAGarder);
+
+            update_module(moy_module[0], modules[i]);
+            moyenneG = moyenneG + parseFloat(moy_module[0]);
+            nb_modules++;
         }
     }
+    update_moyenneG(html_moyenneG, moyenneG, nb_modules);
 }
 
 function get_modules(childs) {
@@ -441,11 +450,22 @@ function calcule_module(liste_notes) {
         notes = notes + (temp_val * parseFloat(liste_notes[i].className))
     }
     let moyenne = notes/coeff
-    return moyenne
+    moyenne = sanitizeFloatingPointErrors(moyenne) // removes imperfections
+    return [moyenne, coeff]
 }
 
 function update_module(moyenne, module) {
 
     let moyenne_html = module.querySelector("#moyenne")
     moyenne_html.innerHTML = "Moyenne : " + moyenne
+}
+
+function sanitizeFloatingPointErrors(x) {
+  return Number.parseFloat(x).toFixed(3);
+}
+
+function update_moyenneG(elt, moyenne, nb_notes) {
+
+    let res = moyenne/nb_notes
+    elt.innerHTML = "Moyenne : " + res;
 }
