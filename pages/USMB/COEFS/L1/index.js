@@ -19,8 +19,8 @@ const S1 = [
         "module" : "INFO",
         "titre_long" : "Algorithmique",
         "notes" : {
-            "CM_ControleContinu" : 0.8,
-            "CM_ControleTerminal" : 1.3,
+            "CM_ControleContinu" : 0.84,
+            "CM_ControleTerminal" : 1.26,
             "TP" : 0.9,
         }
     },
@@ -40,8 +40,8 @@ const S1 = [
         "module" : "ETRS",
         "titre_long" : "Mathématiques pour le numérique 1",
         "notes" : {
-            "CM" : 1.5,
-            "TP" : 1.5,
+            "CM_ControleTerminal" : 2.1,
+            "TP" : 0.9,
         }
     },
     {
@@ -50,7 +50,7 @@ const S1 = [
         "module" : "ETRS",
         "titre_long" : "Systèmes numériques",
         "notes" : {
-            "CM" : 2.1,
+            "CM_ControleTerminal" : 2.1,
             "TP_connaissance" : 0.6,
             "TP_competence" : 0.3,
         }
@@ -64,6 +64,7 @@ const S1 = [
             "ANGLAIS" : 3
         }
     },
+    //les évaluation d'AIPE101 et AIPE102 sont commune à l'exeption des notes d'oraux et ceux qui on une note inférieure à 10/20
     {
         "option" : false,
         "titre" : "AIPE101",
@@ -155,8 +156,8 @@ const S2 = [
         "module" : "ETRS",
         "titre_long" : "Electronique programmable",
         "notes" : {
-            "CM" : -1,
-            "TP" : -1,
+            "CM_ControleTerminal" : 2.25,
+            "TP" : 0.75,
         }
     },
     {
@@ -165,8 +166,8 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Systèmes d'exploitation",
         "notes" : {
-            "CM" : -1,
-            "TP" : -1,
+            "CM_ControleTerminal" : 1.8,
+            "TP" : 1.2,
         }
     },
     {
@@ -187,8 +188,8 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Languages du Web 2",
         "notes" : {
-            "CM_CC1" : -1 ,
-            "CM_CC2" : -1 ,
+            "CM_CC" : 1.8 ,
+            "TP" : 1.2 ,
         }
     },
     {
@@ -207,7 +208,8 @@ const S2 = [
         "module" : "MOD",
         "titre_long" : "Anglais SceM",
         "notes" : {
-            "TD" : -1 ,
+            "Écrit/Oral" : 2.4 ,
+            "Travail personnel" : 0.6,
         }
     },
     {
@@ -216,10 +218,10 @@ const S2 = [
         "module" : "MOD",
         "titre_long" : "Orientation et métiers",
         "notes" : {
-            "CM" : 0.25,
-            "TD" : 0.25,
-            "TD EFA" : 0.25,
-            "AUTO" : 0.25,
+            "Dossier" : 0.5,
+            "Rapport" : 0.5,
+            "Oral" : 0.5,
+            "Écrit" : 0.5,
         }
     },
     {
@@ -228,10 +230,7 @@ const S2 = [
         "module" : "OPTION",
         "titre_long" : "Nutrition / Conférences / sport",
         "notes" : {
-            "CM" : 0.25,
-            "TD" : 0.25,
-            "TD EFA" : 0.25,
-            "AUTO" : 0.25,
+            "Note" : 1,
         }
     },
 
@@ -242,7 +241,7 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Projet multidisciplinaire",
         "notes" : {
-            "TP" : -1 ,
+            "Note" : 3,
         }
     },
     {
@@ -251,11 +250,9 @@ const S2 = [
         "module" : "MATHS",
         "titre_long" : "Analyse",
         "notes" : {
-            "CM_CC1" : 2.25,
-            "CM_CC1" : 2.25,
-            "TD_CC1" : 0.45,
-            "TD_CC2" : 0.45,
-            "TD_CC3" : 0.45,
+            "CM_CC1" : 1.2,
+            "CM_CC1" : 1.2,
+            "TD" : 0.6,
         }
     },
 ];
