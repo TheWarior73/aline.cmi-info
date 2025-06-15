@@ -188,8 +188,8 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Languages du Web 2",
         "notes" : {
-            "CM_CC" : 1.8 ,
-            "TP" : 1.2 ,
+            "CM_CC" : 1.5 ,
+            "TP" : 1.5 ,
         }
     },
     {
