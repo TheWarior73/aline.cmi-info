@@ -10,7 +10,7 @@
 
 # REDO
 
-- Be consistent with language
+- ## EVERYTHING
 
 # TODO
 

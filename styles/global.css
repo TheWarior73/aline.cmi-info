@@ -215,3 +215,13 @@ footer #links {
     text-align: center;
     font-size: 1em;
 }
+
+#redirect {
+    stroke-width: 2px;
+    fill: none;
+    color: var(--accent);
+    height: 16px;
+    width: 16px;
+    align-self: flex-end;
+    margin-left: 3px;
+}

@@ -43,6 +43,10 @@ main #bio #main #short {
     margin: 10px 0 0 0;
 }
 
+#bio-comment {
+    cursor: pointer;
+    user-select: none;
+}
 
 
 /* |============| */
@@ -85,4 +89,16 @@ main #icons a:hover figure svg{
 
 main #icons a figure{
     margin-left: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* A bit of responsive, for once */
+@media screen and (width < 1060px) {
+    .container {
+        flex-direction: column-reverse;
+    }
 }
