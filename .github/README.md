@@ -13,7 +13,7 @@ If you wish to use my work for other purposes, I do grant permission to use it a
 <div align="center">
 <strong> Made with </strong>
 
-[![JavaScript](https://img.shields.io/badge/JavaScript-009cb5?style=flat-square&logo=JavaScript)](https://www.python.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-009cb5?style=flat-square&logo=JavaScript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 ![love](https://img.shields.io/badge/❤️Love-pink?style=flat-square)
 
 </div>
