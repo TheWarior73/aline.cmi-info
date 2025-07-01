@@ -30,7 +30,7 @@
             <ul>
                 <li><a href="/">About Me</a></li>
                 <li><a href="/projects" id="active">Projects</a></li>
-                <li><a href="/Misc">Misc Stuff</a></li>
+                <li><a href="/misc">Misc Stuff</a></li>
             </ul>
         </nav>
     </header>
