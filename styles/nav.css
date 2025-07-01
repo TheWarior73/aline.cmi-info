@@ -1,0 +1,9 @@
+arrow {
+    font-size: large;
+    font-weight: bold;
+}
+
+.navigation li a {
+    margin-left: -15px; /* This trick includes the arrow for the pointer to add more area to click on*/
+    padding-left: 15px;
+}
