@@ -50,9 +50,11 @@
         </div>
 
 
+        <!-- 
         <div class="Misc">
             <h2>Personal</h2>
-        </div>
+        </div> 
+        -->
 
         <div class="Misc">
             <h2>Lasnelus <code>Friend</code></h2>
