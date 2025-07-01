@@ -29,7 +29,7 @@
             <ul>
                 <li><a href="/" id="active">About Me</a></li>
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="/Misc">Misc Stuff</a></li>
+                <li><a href="/Misc">misc stuff</a></li>
             </ul>
             <!-- Photography -->
         </nav>
