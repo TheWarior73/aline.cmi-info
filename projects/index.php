@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- Title -->
-    <title>Home</title>
+    <title>Projects</title>
 
     <!-- Preload Scripts -->
     <script src="/scripts/global/nav.js"></script> <!-- gets the current dir -->
