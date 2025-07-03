@@ -1,327 +1,5 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aline.dev/projects/USMB/COEFS</title>
 
-    <style>
-@font-face {
-    font-family: "Lexend";
-    src: url(../fonts/Lexend-VariableFont_wght.ttf);
-}
 
-:root {
-    --main: #191A19;
-    --main100:#535353;
-    --main500:#363736;
-    --secondary: #1E5128;
-    --secondary100:#567d5e;
-    --secondary500:#3a6743;
-    --tertiary: #4E9F3D;
-    --tertiary100:#7ab76e;
-    --tertiary500:#64ab55;
-    --accent: rgba(207, 207, 207, 0.9);
-
-    --pfp-border-radius: 64px;
-    --h1-underline: 5px;
-    --h2-underline: 3px;
-    --h3-underline: 2px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--main);
-    color: var(--accent);
-    font-family:"Lexend", sans-serif;
-    line-height: 1.5em;
-}
-
-
-/*
-2 for the same thing, but mr moz-selection is a crybaby and breaks the css if put with selection.
-*/
-::-moz-selection {
-    color: var(--accent);
-    background-color: var(--secondary);
-}
-
-::selection {
-    color: var(--accent);
-    background-color: var(--secondary);
-}
-
-
-/* ==== [ Header ] ==== */
-
-header {
-    font-size: 1.25em;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-header a img {
-    max-height: 75px;
-    max-width: 75px;
-    border-radius: var(--pfp-border-radius);
-    margin: 0 10px;
-}
-
-
-
-header a {
-    color: var(--accent);
-    text-decoration: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-
-
-header nav ul {
-    display: flex;
-    flex-direction: row;
-}
-
-header nav ul li {
-    list-style-type:none;
-    padding: 0 10px;
-}
-
-header nav ul li a {
-    transition: .3s;
-    color: var(--secondary);
-}
-
-header nav ul li a:hover {
-    transition: .3s;
-    color: var(--tertiary);
-}
-
-header nav ul li a#active {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-decoration-color: var(--secondary100);
-    color: var(--tertiary);
-    transition: .3s;
-}
-
-header nav ul li a#active:hover {
-    text-decoration-color: var(--tertiary100);
-}
-
-/* ==========[ Main ]========== */
-
-/* NAVIGATION */
-main ul.navigation li {
-    list-style-type: none;
-}
-
-main ul.navigation li a {
-    color: var(--secondary);
-    text-decoration-color: var(--secondary);
-    text-decoration-thickness: var(--h2-underline);
-}
-
-main ul.navigation li a:hover {
-    color: var(--accent);
-    text-decoration-color: var(--tertiary);
-}
-
-main ul.navigation li a#active {
-    color: var(--tertiary);
-    text-decoration-color: var(--tertiary);
-}
-
-main ul.navigation li a#active:hover {
-    text-decoration-color: var(--accent);
-}
-
-
-
-/* End Nav */
-main {
-    display: flex;
-    min-height: 85vh;
-    flex-direction: column;
-    padding: 0 10%;
-}
-
-main a {
-    color: var(--accent);
-    transition: .3s;
-}
-
-main a:hover {
-    color: var(--tertiary);
-    transition: .3s;
-}
-
-main code {
-    color: var(--secondary);
-    font-family: sans-serif;
-    background-color: var(--tertiary100);
-    border-radius: 10px;
-    padding: 1px 5px;
-}
-
-main u {
-    text-decoration-color: var(--secondary500);
-    text-decoration-thickness: 3px;
-}
-
-main  h1 {
-    text-decoration: underline;
-    text-decoration-thickness: var(--h1-underline);
-    text-decoration-color: var(--tertiary);
-    transition: .3s;
-}
-
-main h2 a {
-    text-decoration-color: var(--tertiary);
-    transition: .3s;
-    text-decoration-thickness: var(--h1-underline);
-}
-
-main h2 a:hover {
-    text-decoration-color: var(--accent);
-    transition: .3s;
-}
-
-#pagesNav {
-    margin-bottom: 0;
-}
-
-.placeholderDiv {
-    display: flex;
-    flex: 1;
-}
-
-/* ==== [ Footer ] ==== */
-
-footer a {
-    color: var(--main100);
-    font-size: 1.1em;
-    text-decoration: none;
-    transition: .3s;
-}
-
-footer a:hover {
-    color: var(--tertiary);
-    text-decoration: underline;
-    text-decoration-color: var(--accent);
-    transition: .3s;
-}
-
-footer #links {
-    text-align: center;
-    font-size: 1em;
-}
-    </style>
-
-    <style>
-.semestre {
-    background: var(--secondary500);
-    border-radius: 16px;
-    margin: 0 -15px;
-}
-
-.module {
-    background-color: var(--secondary100);
-    
-    border-radius: 16px;
-    overflow: clip;
-
-    margin: 5px;
-    padding: 5px;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.module p {
-    margin: 5px 0;
-}
-
-#ModNum {
-    width: fit-content;
-    
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-
-    padding: 2px 15px;
-    margin: 0 0 5px 0;
-
-    background-color: var(--secondary);
-}
-
-#ModTitle {
-    margin: -5px 0 5px 0;
-    width: fit-content;
-    
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
-    border-top-right-radius: 16px;
-
-    padding: 2px 15px;
-
-    background-color: var(--tertiary500);
-    color: var(--main);
-}
-
-#section {
-    background-color: var(--secondary);
-    margin: 5px 0;
-    padding: 5px 15px;
-
-    border-radius: 16px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.module input {
-    border-radius: 16px;
-    border: none;
-
-    padding: 0 15px;
-    height: 25px;
-    width: 250px;
-}
-
-.bouton {
-    display: flex;
-    margin: 5px;
-}
-
-.bouton button{
-    background: var(--secondary);
-    color: var(--accent);
-
-    border: none;
-    border-radius: 16px;
-    margin-right: 15px;
-
-    transition: .3s;
-}
-
-.bouton button:hover {
-    cursor: pointer;
-    background-color: var(--tertiary500);
-    color: var(--main);
-
-    transition: .3s;
-}
-
-.bouton p {
-    margin: 0;
-}
-    </style>
-
-    <script>
 const S1 = [
     {
         "option" : false,
@@ -329,10 +7,9 @@ const S1 = [
         "module" : "MATHS",
         "titre_long" : "Mathématiques et applications",
         "notes" : {
-            "CM_ControleContinu" : 2.43,
-            "CM_ControleTerminal" : 2.97,
-            "TD" : 0.45,
-            "TP" : 0.15
+            "CM_ControleTerminal" : 5.4,
+            "TD*" : 0.45,
+            "TP*" : 0.15
         }
     },
     {
@@ -341,9 +18,8 @@ const S1 = [
         "module" : "INFO",
         "titre_long" : "Algorithmique",
         "notes" : {
-            "CM_ControleContinu" : 0.84,
-            "CM_ControleTerminal" : 1.26,
-            "TP" : 0.9,
+            "CM_ControleTerminal" : 2.1,
+            "TP*" : 0.9,
         }
     },
     {
@@ -352,8 +28,8 @@ const S1 = [
         "module" : "INFO",
         "titre_long" : "Langages du Web 1",
         "notes" : {
-            "CM" : 1.5,
-            "TP" : 1.5,
+            "CM*" : 1.5,
+            "TP*" : 1.5,
         }
     },
     {
@@ -363,7 +39,7 @@ const S1 = [
         "titre_long" : "Mathématiques pour le numérique 1",
         "notes" : {
             "CM_ControleTerminal" : 2.1,
-            "TP" : 0.9,
+            "TP*" : 0.9,
         }
     },
     {
@@ -373,8 +49,8 @@ const S1 = [
         "titre_long" : "Systèmes numériques",
         "notes" : {
             "CM_ControleTerminal" : 2.1,
-            "TP_connaissance" : 0.6,
-            "TP_competence" : 0.3,
+            "TP_connaissance*" : 0.6,
+            "TP_competence*" : 0.3,
         }
     },
     {
@@ -393,7 +69,7 @@ const S1 = [
         "module" : "MOD",
         "titre_long" : "Méthodologie du travail universitaire",
         "notes" : {
-            "AIPE101" : 1
+            "AIPE101*" : 1
         }
     },
     {
@@ -402,7 +78,7 @@ const S1 = [
         "module" : "MOD",
         "titre_long" : "Intégration à la vie universitaire",
         "notes" : {
-            "AIPE102" : 1
+            "AIPE102*" : 1
         }
     },
     {
@@ -411,7 +87,7 @@ const S1 = [
         "module" : "MOD",
         "titre_long" : "Enseignement d'ouverture (conf / climat / sport)",
         "notes" : {
-            "OPTION" : 1
+            "OPTION**" : 1
         }
     },
     {
@@ -421,8 +97,8 @@ const S1 = [
         "titre_long" : "Statistique descriptive",
         "notes" : {
             "CM" : 2.25,
-            "TD" : 0.45,
-            "TP" : 0.3
+            "TD*" : 0.45,
+            "TP*" : 0.3
         }
     },
     {
@@ -432,7 +108,7 @@ const S1 = [
         "titre_long" : "Logique et ensembles",
         "notes" : {
             "CM" : 2.4,
-            "TD" : 0.6
+            "TD*" : 0.6
         }
     },
     {
@@ -441,9 +117,9 @@ const S1 = [
         "module" : "INDIV",
         "titre_long" : "Domotique",
         "notes" : {
-            "CC" : 4.2,
-            "CC1_competence" : 1.494,
-            "CC2_competence" : 0.306
+            "CC*" : 4.2,
+            "CC1_competence*" : 1.494,
+            "CC2_competence*" : 0.306
         }
     },
 ];
@@ -455,10 +131,9 @@ const S2 = [
         "module" : "MATHS",
         "titre_long" : "Algèbre 2",
         "notes" : {
-            "CM_CC1" : 1.2,
-            "CM_CC2" : 1.2,
-            "TD" : 0.45,
-            "TP": 0.15,
+            "CM_CT" : 2.4,
+            "TD*" : 0.45,
+            "TP*": 0.15,
         }
     },
     {
@@ -468,8 +143,8 @@ const S2 = [
         "titre_long" : "Réseaux informatiques et internet",
         "notes" : {
             "CM" : 2.1,
-            "TP_CC" : 0.297,      
-            "TP_CT" : 0.603,  
+            "TP_CC*" : 0.297,
+            "TP_CT*" : 0.603,
         }
     },
     {
@@ -478,8 +153,8 @@ const S2 = [
         "module" : "ETRS",
         "titre_long" : "Electronique programmable",
         "notes" : {
-            "CM_ControleTerminal" : 2.25,
-            "TP" : 0.75,
+            "CM_CT" : 2.25,
+            "TP*" : 0.75,
         }
     },
     {
@@ -488,8 +163,8 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Systèmes d'exploitation",
         "notes" : {
-            "CM_ControleTerminal" : 1.8,
-            "TP" : 1.2,
+            "CM_CT" : 1.8,
+            "TP*" : 1.2,
         }
     },
     {
@@ -498,10 +173,8 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Programmation et algorithmique",
         "notes" : {
-            "CM_CC1" : -1 ,
-            "CM_CC2" : -1 ,
-            "CM_CC3" : -1 ,
-            "TP" : -1 ,
+            "CM_CT" : 1.8,
+            "TP*" : 1.2,
         }
     },
     {
@@ -510,8 +183,8 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Languages du Web 2",
         "notes" : {
-            "CM_CC" : 1.8 ,
-            "TP" : 1.2 ,
+            "CM_CT" : 1.5,
+            "TP*" : 1.5,
         }
     },
     {
@@ -521,7 +194,7 @@ const S2 = [
         "titre_long" : "Mathématiques pour le numérique 2",
         "notes" : {
             "CM_CT" : 2.4,
-            "TP_CC" : 0.6,
+            "TP_CC*" : 0.6,
         }
     },
     {
@@ -530,8 +203,7 @@ const S2 = [
         "module" : "MOD",
         "titre_long" : "Anglais SceM",
         "notes" : {
-            "Écrit/Oral" : 2.4 ,
-            "Travail personnel" : 0.6,
+            "CT" : 3,
         }
     },
     {
@@ -540,10 +212,10 @@ const S2 = [
         "module" : "MOD",
         "titre_long" : "Orientation et métiers",
         "notes" : {
-            "Dossier" : 0.5,
-            "Rapport" : 0.5,
-            "Oral" : 0.5,
-            "Écrit" : 0.5,
+            "Dossier*" : 0.5,
+            "Rapport*" : 0.5,
+            "Oral*" : 0.5,
+            "Écrit*" : 0.5,
         }
     },
     {
@@ -552,7 +224,7 @@ const S2 = [
         "module" : "OPTION",
         "titre_long" : "Nutrition / Conférences / sport",
         "notes" : {
-            "Note" : 1,
+            "Note**" : 1,
         }
     },
 
@@ -563,7 +235,7 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Projet multidisciplinaire",
         "notes" : {
-            "Note" : 3,
+            "Note*" : 3,
         }
     },
     {
@@ -572,9 +244,8 @@ const S2 = [
         "module" : "MATHS",
         "titre_long" : "Analyse",
         "notes" : {
-            "CM_CC1" : 1.2,
-            "CM_CC2" : 1.2,
-            "TD" : 0.6,
+            "CM_CT" : 2.4,
+            "TD*" : 0.6,
         }
     },
 ];
@@ -592,7 +263,6 @@ function html_onload() {
 // HTML CONSTRUCTOR
 function html_semestre(modules, semestre_nb) {
     let semestre = document.querySelector(semestre_nb); // semestre : ".un" ou ".deux"
-    console.log(semestre)
 
     let liste_options = [];
 
@@ -792,56 +462,3 @@ function update_moyenneG(elt, moyenne, nb_notes) {
     let res = moyenne/nb_notes
     elt.innerHTML = "Moyenne : " + res;
 }
-    </script>
-</head>
-<body onload="html_onload()">
-    <header>
-        <nav>
-            <ul>
-                <li><a href="https://aline.cmi-info.fr">Mon site avec le calculateur</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-
-        <div class="disclaimer">
-            <h2>
-                <code>Note : Le calcul de note peut être cassé</code>
-            </h2>
-            <code>Pensez a faire un report de bug <a href="https://github.com/TheWarior73/aline.cmi-info/issues" style="color: var(--main); font-weight: 600;">sur le github</a></code><br>
-            <code>Ou a envoyer un mail a <a href="mailto:bellotew@etu.univ-smb.fr" style="color: var(--main); font-weight: 600; text-decoration: underline;">bellotew@etu.univ-smb.fr</a></code>
-        </div>
-
-
-        <div class="annee">
-
-            <h1>Première année</h1>
-            <p>Le calcul ne s'effectue que sur les notes entrées, si un champ est laissé vide, il n'est pas compté</p>
-            
-            <code>
-                <a href="#s2" style="color: var(--main); font-weight: 600;">Aller au semestre 2</a>
-            </code>
-
-            <div class="un">
-                <h2 id="s1">Semestre 1</h2>
-                <p>
-                    Calcul semestre 1, les options se trouvent a la fin du formulaire
-                </p>
-            </div>
-
-            <div class="deux">
-                <h2 id="s2">Semestre 2</h2>
-                <p>
-                    Calcul semestre 2, les options se trouvent a la fin du formulaire
-                </p>
-            </div>
-        </div>
-
-    </main>
-    <footer>
-        <div id="links">
-            Aline . <a href="https://github.com/TheWarior73/aline.cmi-info">Source</a> . 2025
-        </div>
-    </footer>
-
-</body></html>
