@@ -7,7 +7,7 @@
  * Creates the navigation element in directories for navigation purposes
  */
 function getnav() {
-    const path = window.location.pathname; // cur path
+    const path = window.location.pathname;                                                  // cur path
     const segments = path.split('/').filter(seg => seg !== "");                             // removes empty segments
 
     let li = document.querySelector(".navigation li");

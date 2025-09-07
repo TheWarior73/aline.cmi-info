@@ -24,7 +24,9 @@
     <header>
         <a href="/">
             <img src="/img/four_leaf_pfp.jpg" alt="Pfp">
-            Aline B.
+            <span id="header_aline">
+                Aline B.
+            </span>
         </a>
         <nav>
             <ul>
@@ -43,69 +45,203 @@
 
         <div id="intro">                                                        <!-- Unused ID -->
             <h1>Présentation portail MISPI</h1>
+            <p>
+                ❯❯ L1 MISPI - USMB
+            </p>
+            <p>
+                📍Campus de Technolac - 73376 Le Bourget-du-Lac
+            </p>
             <h2>Sommaire</h2>
             <ul>
-                <li><a href="#mat">Tronc Commun</a></li>
-                <li><a href="#opt">Options</a></li>
+                <li><a href="#infos">Infos Pratiques</a></li>
                 <li><a href="#deb">Débouchés</a></li>
+                <li><a href="#cours">Cours</a></li>
             </ul>
+
+            <div class="info">
+                <p>
+                    MISPI : <b>M</b>athématiques <b>I</b>nformatique <b>S</b>cience Pour l'<b>I</b>ngénieur
+                </p>
+                <p>
+                    Ce sont les 3 grandes thématiques de la formation en 1<sup>ere</sup> année
+                </p>
+            </div>
+            
+            <div class="success">
+                <p>
+                    <a href="https://formations.univ-smb.fr/fr/catalogue/licence-XA/sciences-technologies-sante-STS/licence-informatique-KGXYTYFC.html">Lien de la présentation de la formation par l'USMB</a>
+                </p>
+            </div>
             <p>
-                <code>Note</code> MISPI signifie Mathématiques Informatique Science Pour l'Ingénieur, ce sont les 3 grandes thématiques de la formation en 1<sup>ere</sup> année
-            </p>
-            <p>
-                <a href="https://formations.univ-smb.fr/fr/catalogue/licence-XA/sciences-technologies-sante-STS/licence-informatique-KGXYTYFC.html">Lien de la présentation de la formation par l'USMB</a>
-            </p>
-            <p style="background-color: var(--tertiary100);border-radius: 1em;padding:5px 10px;">
-                <u style="text-decoration-color: var(--secondary);color: var(--secondary);">La formation consiste en un regroupement de plusieurs domaines servant ainsi de portail lors de la première année, permettant ainsi d'experimenter dans les différentes matières afin de se laisser un choix supplémentaire pour décider en fin de première année</u>
+                La première année vois plusieurs domaines regroupés au cein de la formation, d'ou le nom MISPI. Cela a pour effet de permettre un choix supplémentaire a la fin de l'année dans la formation sans forcément devoir se réorienter via parcoursup si le domaine ne vous plait pas.
             </p>
 
-            <h2 id="mat">Tronc Commun</h2>
-                <p>Ici nous aborderons les cours du Semestre 1 pour donner un avant goût de la formation</p>
-                <code>Informatique (INFO)</code>
-                <ul style="list-style-type:none; padding-left: 1em;">
-                    <li>101. Algorithmique | [4CM, 6TD, 6TP]</li>
-                    <li>102. Langage du web | [4CM, 7TD, 4TP]</li>
-                </ul>
-                <code>Mathématiques (MATH)</code>
-                <ul style="list-style-type:none; padding-left: 1em;">
-                    <li>103. Mathématiques et application | [16CM, 16TD, 3TP]</li>
-                </ul>
-                <code>Electronique (ETRS)</code>
-                <ul style="list-style-type:none; padding-left: 1em;">
-                    <li>101. Mathématiques pour le numérique 1 | [6CM, 6TD, 3TP]</li>
-                    <li>102. Mathématiques pour le numérique 2 | [5CM, 5TD, 4TP]</li>
-                </ul>
-                <code>Autres</code>
-                <ul style="list-style-type:none; padding-left: 1em;">
-                    <li>101. Méthodologie du travail universitaire (AIPE) | [1CM, 7TD, NaN TP]</li>
-                    <li>102. Intégration au travail universitaire (AIPE) | [1CM, 1TD, 2TP]</li>
-                    <li>Nan. ANG | [En ligne]</li>
-                </ul>
-                
-                
-            <h2 id="opt">Options</h2>
-                <p>Toujours au semestre 1... <br>
-                    Possibilité de choisir l'une ou l'autre des matières suivantes (MATH = 2 cours)</p>
-                <code>Mathématiques (MATH)</code>
-                <ul style="list-style-type:none; padding-left: 1em;">
-                    <li>104. Statistiques descriptives | [6CM, 6TD, 3TP]</li>
-                    <li>105. Ensembles et logique | [9CM, 10TD, NaN TP]</li>
-                </ul>
-                <code>Projet (ETRS)</code>
-                <ul style="list-style-type:none; padding-left: 1em;">
-                    <li>103. Projet Domotique | [1CM, 17TD, 8TP]</li>
-                </ul>
-                
-            <h2 id="deb">Débouchés</h2>
+            <h2 id="infos">Infos Pratiques</h2>  
+            <div class="success">
+                <p>
+                    Diplôme National de Licence contrôlé par l'etat
+                </p>
+            </div>
+
+            <ul>
+                <li>
+                    <b>Durée</b> : 3 an (6 semestres)
+                </li>
+                <li>
+                    <b>ECTS</b> : 180 (60/an)
+                </li>
+                <li>
+                    <b>Niveau de diplôme</b> : Bac + 3 
+                    <ul>
+                        <li><b>Master</b> : Bac + 5</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Langue</b> : Français            
+                </li>
+            </ul>
+
             <p>
-                <ul style="list-style-type:none; padding-left: 1em;">
-                    <li>Licence Math</li>
-                    <li>Licence Info</li>
-                    <li>Licence Science Pour l'Ingénieur</li>
-                </ul>
+                Conditions pour valider l'année : 10 de moyenne générale annuelle
             </p>
+            
+
+
+            <h2 id="deb">Poursuite d'études</h2>
+            <ul class="chevron">
+                <li>
+                    Master Informatique
+                </li>
+                <li>
+                    Master Réseaux et télécommunication
+                </li>
+                <li>
+                    Préparation CAPES Informatique
+                </li>
+                <li>
+                    Intégration école ingénieur (INPG, INSA, …)
+                </li>
+            </ul>
+
+            <h2 id="cours">Cours</h2>
+            <div class="info">
+                <p>
+                    Cours du Semestre N°1, triés par modules
+                </p>
+                <p>
+                    La quantitée peut paraitre importante, mais en réalité le volume horaire l'est moins
+                </p>
+
+                <div class="success">
+                    <p>
+                        A l'université, le travail de préparation en prévision des cours (TD/TP) est important
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3>
+                    UAF101 Outils Mathématiques (6 crédits)
+                </h3>
+                <ul class="chevron">
+                    <li>
+                        Mathématiques et applications (MATH103) 
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>
+                    UAF102 Sciences du numérique (6 crédits)
+                </h3>
+                <ul class="chevron"">
+                    <li>
+                        Mathématiques pour le numérique 1 (ETRS101)
+                    </li>
+                    <li>
+                        Systèmes numériques (ETRS102)
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>
+                    UAF103 Informatique (6 crédits)
+                </h3>
+                <ul class="chevron">
+                    <li>
+                        Algorithmique (INFO101)
+                    </li>
+                    <li>
+                        Langages du Web 1 (INFO102) 
+                    </li>
+                </ul>
+            </div>
+             
+            <div>
+                <h3>
+                    UAI104 UA d'individualisation (1 UA parmi 2)
+                </h3>
+                Au choix : 1 parmi 2
+                
+                <ul class="chevron">
+                    <li>
+                        UAI104 Projet Interdisciplinaire
+                        <ul style="list-style-type: disc;">
+                            <li>
+                                Domotique (ETRS103) 
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        UAI104 Mathématiques
+                        <ul style="list-style-type: disc;">
+                            <li>
+                                Statistique descriptive (MATH104)
+                            </li>
+                            <li>
+                                Logique et ensembles (MATH105) 
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+                
+            <div>
+                <h3>
+                    UAM105 UA Modulaire (6 crédits)
+                </h3>
+                <ul class="chevron">
+                    <li>
+                        Anglais (ANGL101_SCEM)
+                    </li>
+                    <li>
+                        Méthodologie du travail universitaire (AIPE101)
+                    </li>
+                    <li>
+                        Intégration à la vie universitaire (AIPE102) 
+                    </li>
+                    <li>
+                        Enseignements d'ouverture
+                        <ul style="list-style-type: disc;">
+                            <p>
+                                Au choix : 1 parmi 3
+                            </p>
+                            <li>
+                                Cycle Conférences 1 (CONF101)
+                            </li>
+                            <li>
+                                Changement climatique-Impacts et Solutions 1 (CCIS101)
+                            </li>
+                            <li>
+                                Sport 73 (Bourget) (SPOR101) 
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-        
     </main>
 </body>
 <!-- Post Load Scripts -->

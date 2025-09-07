@@ -1,6 +1,5 @@
 /* ==== [ Main ] ==== */
 
-
 /* |===========| */
 /* |    bio    | */
 /* |===========| */
@@ -64,7 +63,34 @@ svg {
     transition: .3s;
 }
 
+/* Left container side*/
+#left-column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
 
+/* Center container */
+#center-column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Right container side */
+#right-column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* |=============| */
+/* | Quick Links | */
+/* |=============| */
+
+#quick_links p{
+    text-align: right;
+}
 
 /* |=============| */
 /* |    Tools    | */
@@ -79,6 +105,7 @@ main #icons a figure {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px 20px;
 }
 
 main #icons a:hover figure svg{
@@ -87,18 +114,76 @@ main #icons a:hover figure svg{
     transition: .3s;
 }
 
-main #icons a figure{
-    margin-left: 0;
-}
-
 .container {
     display: flex;
     justify-content: space-between;
 }
 
+/*
+MS logo colors
+*/
+
+#ms-red, #ms-green, #ms-blue, #ms-yellow {
+    transition: .3s;
+}
+
+#ms-logo:hover #ms-red {
+    fill: #f45326;
+    transition: .3s;
+}
+
+#ms-logo:hover #ms-green {
+    fill: #82bc06;
+    transition: .3s;
+}
+
+#ms-logo:hover #ms-blue {
+    fill: #05a6f1;
+    transition: .3s;
+}
+
+#ms-logo:hover #ms-yellow {
+    fill: #ffbb08;
+    transition: .3s;
+}
+
+
+
 /* A bit of responsive, for once */
-@media screen and (width < 1060px) {
+@media screen and (width < 1330px) {
     .container {
         flex-direction: column-reverse;
     }
+
+    #icons {
+        justify-content: center;
+    }
+
+    #left-column {
+        text-align: center;
+    }
+
+    #center-column, #right-column, #quick_links p {
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+}
+
+
+@media screen and (width < 551px) {
+    #right-column {
+        display: none;
+    }
+}
+
+
+@media screen and (width < 439px) {
+    #center-column {
+        display: none;
+    }
+
+    /* Will be usefull once the hamburger stuff will have been set up */
+    /* nav {
+        display: none;
+    } */
 }

@@ -1,7 +1,18 @@
+@import url(./notes.css);
+/* @import "https://www.nerdfonts.com/assets/css/webfont.css"; */ /* Useless for now, might become usefull later */
+
 @font-face {
     font-family: "Lexend";
     src: url(../fonts/Lexend-VariableFont_wght.ttf);
 }
+
+
+
+
+
+/* ====== === =  >:3c  = === ====== */
+/* ======== == [ VARS ] == ======== */
+/* ====== === =  >:3c  = === ====== */
 
 :root {
     --main: #191A19;
@@ -15,11 +26,27 @@
     --tertiary500:#64ab55;
     --accent: rgba(207, 207, 207, 0.9);
 
+    --info: oklch(70% 0.165 254.624);
+    --info-background: oklch(70% 0.165 254.624 / 0.15);
+
+    --error: oklch(64% 0.246 16.439);
+    --error-background: oklch(64% 0.246 16.439 / 0.15);
+
+    --success: oklch(72% 0.219 149.579);
+    --success-background: oklch(72% 0.219 149.579 / 0.15);
+
+    --light-gray: #ffffffa0;
+
     --pfp-border-radius: 64px;
     --h1-underline: 5px;
     --h2-underline: 3px;
     --h3-underline: 2px;
 }
+
+
+
+
+
 
 html {
     scroll-behavior: smooth;
@@ -30,6 +57,8 @@ body {
     color: var(--accent);
     font-family:"Lexend", sans-serif;
     line-height: 1.5em;
+    text-justify: inter-word;
+    text-align: justify;
 }
 
 
@@ -46,6 +75,13 @@ body {
     background-color: var(--secondary);
 }
 
+ul.chevron {
+    list-style-type:'❯❯ ';
+}
+
+
+
+
 
 /* ==== [ Header ] ==== */
 
@@ -55,16 +91,12 @@ header {
     justify-content: space-between;
 }
 
-
-
 header a img {
     max-height: 75px;
     max-width: 75px;
     border-radius: var(--pfp-border-radius);
     margin: 0 10px;
 }
-
-
 
 header a {
     color: var(--accent);
@@ -74,11 +106,10 @@ header a {
     align-items: center;
 }
 
-
-
 header nav ul {
     display: flex;
     flex-direction: row;
+    padding: 0;
 }
 
 header nav ul li {
@@ -108,6 +139,11 @@ header nav ul li a#active:hover {
     text-decoration-color: var(--tertiary100);
 }
 
+
+
+
+
+
 /* ==========[ Main ]========== */
 
 /* NAVIGATION */
@@ -134,10 +170,12 @@ main ul.navigation li a#active {
 main ul.navigation li a#active:hover {
     text-decoration-color: var(--accent);
 }
-
-
-
 /* End Nav */
+
+
+
+
+
 main {
     display: flex;
     min-height: 85vh;
@@ -195,6 +233,11 @@ main h2 a:hover {
     flex: 1;
 }
 
+
+
+
+
+
 /* ==== [ Footer ] ==== */
 
 footer a {
@@ -224,4 +267,23 @@ footer #links {
     width: 16px;
     align-self: flex-end;
     margin-left: 3px;
+}
+
+
+
+
+
+/* responsive (crazy right) */
+@media screen and (width < 551px) {
+    /* Header to hamburger (hopefully) */
+    #header_aline {
+        display: none;
+    }
+}
+
+@media screen and (width < 439px) {
+    /* Will be usefull once the hamburger stuff will have been set up */
+    /* nav {
+        display: none;
+    } */
 }

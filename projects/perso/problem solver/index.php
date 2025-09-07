@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +10,16 @@
         <!-- Page related sheets -->
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="style.css">
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- Title -->
-    <title>Coefs</title>
+    <title>Problem Solver</title>
 
     <!-- Preload Scripts -->
-    <script src="/scripts/global/nav.js"></script>                              <!-- gets the current dir -->
+    <script src="/scripts/global/nav.js"></script> <!-- gets the current dir -->
 </head>
 <body onload="getnav()">
     <header>
@@ -42,23 +43,29 @@
             <li>
             </li>
         </ul>
+        <h1>Problem Solver</h1>
+        <div class="success">
+            <p>
+                This is a glorified random number generator, enjoy.
+            </p>
+        </div>
 
-        <h1>Calcul de moyenne par semestre</h1>
+        <div id="problem_solver">
 
-        <h2 id="pagesNav"><a href="./L1">Licence 1</a></h2>
-        <p>
-            Calcul semestres 1 et 2 de la première année
-        </p>
-        
-        <h2>La suite plus tard (Soon™)</h2>
-
-        <!-- <h2 id="pagesNav"><a href="">Licence 2</a></h2>
-        <p>
-            Calcul semestres 1 et 2 de la seconde année
-        </p> -->
+            <p>Specify how many choices you have, so I can decide which one you will pick !</p>
+            <div id="params">
+                <input type="number" id="number" value="0">
+                <p id="choice">Choose</p>
+            </div>
+            <div id="ans">
+                <h1>Choose a number first</h1>
+                <code>Come on, don't be shy >:3c</code>
+            </div>
+        </div>
 
     </main>
 </body>
 <!-- Post Load Scripts -->
 <script src="/scripts/global/footer.js"></script>
+<script src="./solver.js"></script>
 </html>

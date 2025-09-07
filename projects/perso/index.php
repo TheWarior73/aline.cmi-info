@@ -24,7 +24,9 @@
     <header>
         <a href="/">
             <img src="/img/four_leaf_pfp.jpg" alt="Pfp">
-            Aline B.
+            <span id="header_aline">
+                Aline B.
+            </span>
         </a>
         <nav>
             <ul>
@@ -41,11 +43,14 @@
             </li>
         </ul>
 
-        <h2 id="pagesNav">Uh Oh...</h2>
+        <h2 id="pagesNav">
+            <a href="./problem solver">
+                Problem Solver
+            </a>
+        </h2>
         <p>
-            It looks like I have nothing to share for now <br>
-            Maybe we should head back <a href="/">home</a> 
-        </p>
+            » Your best friend to help you solve one of the hardest problems on earth : Having choices to make <code>(this is a glorified random number generator)</code>
+        </p>  
         
         
     </main>

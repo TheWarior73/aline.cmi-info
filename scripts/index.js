@@ -5,7 +5,9 @@ const comments = [
     "(Totally Unexpected, really.)",
     "(Who even reads that ?)",
     "(What are you gonna do about it ?)",
-    "(Much love <3)",
+    "(Sending much love <3)",
+    "(click meeeeeeeeeeee)",
+    "(>:3c)",
 ]
 
 var index;

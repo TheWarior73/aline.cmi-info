@@ -24,7 +24,11 @@
     <header>
         <a href="/">
             <img src="/img/four_leaf_pfp.jpg" alt="Pfp">
-            Aline B.
+            <span id="header_aline">
+                <span id="header_aline">
+                Aline B.
+            </span>
+            </span>
         </a>
         <nav>
             <ul>

@@ -1,3 +1,7 @@
+/**
+ * Adds the footer to the bottom of the pages
+ */
+
 let footerDOM = document.querySelector("footer");
 
 if (footerDOM) {

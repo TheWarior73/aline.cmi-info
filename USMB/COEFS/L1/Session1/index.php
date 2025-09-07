@@ -18,7 +18,9 @@
     <header>
         <a href="/">
             <img src="/img/four_leaf_pfp.jpg" alt="Pfp">
-            Aline B.
+            <span id="header_aline">
+                Aline B.
+            </span>
         </a>
         <nav>
             <ul>
@@ -34,27 +36,43 @@
             </li>
         </ul>
 
-        <div class="disclaimer">
-            <h2>
-                <code>Note : Le calcul de note peut être cassé</code>
-            </h2>
-            <code>Pensez a faire un report de bug <a href="https://github.com/TheWarior73/aline.cmi-info/issues" style="color: var(--main); font-weight: 600;">sur le github</a></code><br>
-            <code>Ou a envoyer un mail a <a href="mailto:bellotew@etu.univ-smb.fr" style="color: var(--main); font-weight: 600; text-decoration: underline;">bellotew@etu.univ-smb.fr</a></code>
-            <p>Contact discord possible si vous le connaisez.</p>
+        <div class="info">
+            <h2 style="margin: 0 10px;">Note : Le calcul de note peut être cassé</h2>
+            <ul class="chevron" style="margin: 5px 10px;">
+                <li>
+                    Pensez a faire un report de bug <a href="https://github.com/TheWarior73/aline.cmi-info/issues" style="font-weight: 600;">sur le github</a>
+                </li>
+                <li>
+                    Ou a envoyer un mail a <a href="mailto:bellotew@etu.univ-smb.fr" style="font-weight: 600; text-decoration: underline;">bellotew@etu.univ-smb.fr</a>
+                </li>
+                <li>
+                    Contact discord possible si vous le connaisez.
+                </li>
+            </ul>
         </div>
 
 
         <div class="annee">
 
             <h1>Première année - Session 1</h1>
-            <p>Le calcul ne s'effectue que sur les notes entrées, si un champ est laissé vide, il n'est pas compté</p>
+
+            <div class="error">
+                <p>Le calcul ne s'effectue que sur les notes entrées, si un champ est laissé vide, il n'est pas compté</p>
+            </div>
             
-            <code>
-                <a href="../Session2/" style="color: var(--main); font-weight: 600;">Aller a la session 2</a>
-            </code><br>
-            <code>
-                <a href="#s2" style="color: var(--main); font-weight: 600;">Aller au semestre 2</a>
-            </code>
+            <div class="success">
+                <p>
+                    <a href="../Session2/" style="font-weight: 600;">Aller a la session 2</a>
+                </p>
+                <p>
+                    <a href="#s2" style="font-weight: 600;">Voir le semestre 2</a>
+                </p>
+                <ul class="chevron">
+                    <li>
+                        <a href="/.github/grades_calc/grade_calc_Licence_1_session2.html" style="font-weight: 600;" download="">Télécharger le fichier</a>
+                    </li>
+                </ul>
+            </div>
 
             <div class="un">
                 <h2 id="s1">Semestre 1</h2>

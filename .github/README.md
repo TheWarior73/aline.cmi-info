@@ -7,7 +7,7 @@ If you wish to use my work for other purposes, I do grant permission to use it a
 
 
 > [!TIP]
-> I have provided offline file.s for the grade calculator, find [them here](./grades_calc), you can find online files over on [aline.cmi-info.fr](http://aline.cmi-info.fr/USMB/COEFS/) (you do not have to download anything to use it)
+> I have provided offline file.s for the grade calculator, find [them here](./grades_calc), you can find online files over [there](http://aline.cmi-info.fr/USMB/COEFS/) (you do not have to download anything to use it)
 
 
 <div align="center">

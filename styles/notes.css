@@ -1,0 +1,118 @@
+/* |=============| */
+/* |    NOTES    | */
+/* |=============| */
+
+/* General */
+div.info, div.error, div.success {
+    border-left: 3px solid;
+    margin: 10px 0;
+    
+    padding: 10px 7px;
+    border-radius: 0 8px 8px 0;
+
+    display:flex;
+    flex-direction: column;
+}
+
+div.info *, div.error *, div.success * {
+    text-align: left;
+}
+
+div.info p, div.error p, div.success p {
+    margin: 5px 10px;
+    color: var(--light-gray);
+}
+
+div.info h1, div.error h1, div.success h1,
+div.info h2, div.error h2, div.success h2,
+div.info h3, div.error h3, div.success h3  {
+    margin: 5px 10px;
+}
+
+div.info::before, div.error::before, div.success::before {
+    width: fit-content;
+
+    position: relative;
+
+    padding: 2px 10px;
+    border-radius: 1rem;
+}
+
+/* ====== === =  >:3c  = === ====== */
+/* ======== == [ INFO ] == ======== */
+/* ====== === =  >:3c  = === ====== */
+div.info {
+    border-color: var(--info);
+    background-color: var(--info-background);
+}
+
+div.info::before {
+    content: url("/img/svg/info_outline.svg"); /* Custom colors not follwing vars in media */
+}
+
+/* The two of you should learn to cooperate, it's getting annoying */
+div.info *::-moz-selection {
+    color: var(--info);
+    background-color: var(--info-background);
+}
+
+div.info *::selection {
+    color: var(--info);
+    background-color: var(--info-background);
+}
+
+
+
+
+
+/* ====== === =  >:3c  = === ====== */
+/* ======== == [ Error ] == ======== */
+/* ====== === =  >:3c  = === ====== */
+
+div.error {
+    border-color: var(--error);
+    background-color: var(--error-background);
+}
+
+div.error::before {
+    content: url("/img/svg/warning_amber.svg"); /* Custom colors not follwing vars in media */
+}
+
+/* Sighs... */
+div.error *::-moz-selection {
+    color: var(--error);
+    background-color: var(--error-background);
+}
+
+div.error *::selection {
+    color: var(--error);
+    background-color: var(--error-background);
+}
+
+
+
+
+
+/* ====== === =  >:3c  = === ====== */
+/* ======== == [ success ] == ======== */
+/* ====== === =  >:3c  = === ====== */
+
+div.success {
+    border-color: var(--success);
+    background-color: var(--success-background);
+}
+
+div.success::before {
+    content: url("/img/svg/done_all.svg"); /* Custom colors not follwing vars in media */
+}
+
+/* I don't know what to say anymore... */
+div.success *::-moz-selection {
+    color: var(--success);
+    background-color: var(--success-background);
+}
+
+div.success *::selection {
+    color: var(--success);
+    background-color: var(--success-background);
+}
