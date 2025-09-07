@@ -49,6 +49,19 @@
                     Contact discord possible si vous le connaisez.
                 </li>
             </ul>
+
+            <div class="error">
+                <h2>
+                    Disclaimer : 
+                </h2>
+                <p>
+                    Ce calculateur n'as aucune validitée juridique, son but est de fournir un calcul automatisé de moyennes, il peut être erroné.
+                </p>
+                <p>
+                    Pensez a revérifier vos moyennes en cas de doutes !
+                </p>
+            </div>
+
         </div>
 
 
