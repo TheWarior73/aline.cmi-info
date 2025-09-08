@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +33,7 @@
         </a>
         <nav>
             <ul>
+                <?php if (isset($_SESSION["logged_in"])){echo "<li><a href='/admin/dashboard' style='color:var(--error);'>Dashboard</a></li>";}?>
                 <li><a href="/">About Me</a></li>
                 <li><a href="/projects" id="active">Projects</a></li>
                 <li><a href="/misc">Misc Stuff</a></li>
@@ -44,12 +48,12 @@
         </ul>
 
         <h2 id="pagesNav">
-            <a href="./problem solver">
+            <a href="./problem_solver">
                 Problem Solver
             </a>
         </h2>
         <p>
-            » Your best friend to help you solve one of the hardest problems on earth : Having choices to make <code>(this is a glorified random number generator)</code>
+            ❯❯ Your best friend to help you solve one of the hardest problems on earth : Having choices to make <code>(this is a glorified random number generator)</code>
         </p>  
         
         

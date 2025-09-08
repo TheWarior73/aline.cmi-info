@@ -2,9 +2,12 @@
 
 session_start();
 
-if (!isset($_SESSION["logged_in"]) && $_SESSION["userData"]["discord_id"] != "526790971145453578") {
-	echo "nuh huh";
-        header("Location: ../errors/403.php");
+error_reporting(0);
+$_SESSION["logged_in"] = true; // DEBUG TO REMOVE
+
+if (!isset($_SESSION["logged_in"]) || $_SESSION["userData"]["discord_id"] != "526790971145453578") {
+	echo "not a valid session";
+    // header("Location: ../errors/403");
 }
 
 ?>
@@ -41,8 +44,8 @@ if (!isset($_SESSION["logged_in"]) && $_SESSION["userData"]["discord_id"] != "52
         </a>
         <nav>
             <ul>
-				<li><a href="logout.php" style="color:var(--error);">Log Out</a></li>
-                <li><a href="/" id="active">About Me</a></li>
+                <?php if (isset($_SESSION["logged_in"])){echo "<li><a href='logout.php' style='color:var(--error);'>Log Out</a></li>";}?>
+                <li><a href="/">About Me</a></li>
                 <li><a href="/projects">Projects</a></li>
                 <li><a href="/misc">Misc Stuff</a></li>
             </ul>
@@ -51,6 +54,35 @@ if (!isset($_SESSION["logged_in"]) && $_SESSION["userData"]["discord_id"] != "52
 
     <main>
         
+    <div class="container">
+        <div id="left-column">
+            
+        </div>
+
+        
+        <div id="center-column">
+            
+        </div>
+        
+        
+        <!-- Placeholder -->
+        <div id="right-column"> 
+            <div id="quick_links">
+                <h1>Quick Actions</h1>
+                <p> 
+                    <a href="#">
+                        New Post «
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Update last post «
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
     </main>
 </body>
 <!-- Post Load Scripts -->

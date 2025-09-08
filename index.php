@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +30,7 @@
         </a>
         <nav>
             <ul>
+                <?php if (isset($_SESSION["logged_in"])){echo "<li><a href='/admin/dashboard' style='color:var(--error);'>Dashboard</a></li>";}?>
                 <li><a href="/" id="active">About Me</a></li>
                 <li><a href="/projects">Projects</a></li>
                 <li><a href="/misc">Misc Stuff</a></li>
@@ -343,7 +347,7 @@
                         </a>
                     </p>
                     <p>
-                        <a href="/projects/perso/problem solver/">
+                        <a href="/projects/perso/problem_solver/">
                             Problem Solver «
                         </a>
                     </p>

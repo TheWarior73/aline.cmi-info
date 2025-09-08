@@ -9,6 +9,8 @@ If you wish to use my work for other purposes, I do grant permission to use it a
 > [!TIP]
 > I have provided offline file.s for the grade calculator, find [them here](./grades_calc), you can find online files over [there](http://aline.cmi-info.fr/USMB/COEFS/) (you do not have to download anything to use it)
 
+> [!INFO]
+> While there is currently only the 1st Year calculator, I plan on adding the 2nd and 3rd year once I get more data about grades and coefficients.
 
 <div align="center">
 <strong> Made with </strong>
@@ -23,3 +25,16 @@ Is the subdomain where my website resides, it is hosted by a friend.
 
 In the even where I change hosts, or url, I keep my files backed up here. 
 It also serves a purpose to auto update the website (with a webhook)
+
+
+---
+
+Time wasted doing css, js, messing with svgs and writting shady php code
+
+[![wakatime](https://wakatime.com/badge/github/TheWarior73/aline.cmi-info.svg)](https://wakatime.com/badge/github/TheWarior73/aline.cmi-info)
+
+---
+
+This project was written by a (probably) autistic, sleep deprived and socialy awkward mind.
+
+Feel free to say hi, i'd be happy to chat !

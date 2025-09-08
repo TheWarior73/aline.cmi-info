@@ -76,7 +76,7 @@ $result = json_decode($result, true);
 // session starting
 if ($result["id"] != "526790971145453578") { // magic number
 
-    header("Location: ../errors/403.php");
+    header("Location: ../errors/403");
 
 } else {
     session_start();
@@ -86,5 +86,5 @@ if ($result["id"] != "526790971145453578") { // magic number
         "discord_id"=> $result["id"],
     ];
        
-    header("Location: ../admin/dashboard.php");
+    header("Location: ../admin/dashboard");
 }
