@@ -5,7 +5,7 @@ if (!isset($_GET["code"])) {
     exit();
 }
 
-$env = parse_ini_file('../.env');
+$env = parse_ini_file('../../.env');
 $is_in_debug_mode = $env['DEBUG'];
 
 if ($is_in_debug_mode) { // debug stuff

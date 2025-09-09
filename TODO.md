@@ -1,10 +1,12 @@
 # FIXME
 
+- Liens fichiers hors ligne calculateur
 
 ---
 # REWORK
 
 - COEFS [ core ]
+
 
 ---
 # REDO
