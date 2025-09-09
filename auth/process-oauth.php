@@ -5,8 +5,13 @@ if (!isset($_GET["code"])) {
     exit();
 }
 
-$env = parse_ini_file('../../.env');
+$env = parse_ini_file(__DIR__.'/../../.env');
+
+if (isset($env['DEBUG'])) {
 $is_in_debug_mode = $env['DEBUG'];
+} else {
+    $is_in_debug_mode = false;
+}
 
 if ($is_in_debug_mode) { // debug stuff
     $redirect_uri = "http://localhost/aline/auth/process-oauth.php";
@@ -25,8 +30,6 @@ $payload = [
     'redirect_uri'=>$redirect_uri,
     'scope'=>'identify%20rpc%20email',
 ];
-
-print_r($payload);
 
 $payload_string = http_build_query($payload);
 $discord_token_url = "https://discordapp.com/api/oauth2/token";
