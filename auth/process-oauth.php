@@ -7,14 +7,19 @@ if (!isset($_GET["code"])) {
 
 $env = parse_ini_file(__DIR__.'/../../.env');
 
-if (isset($env['DEBUG'])) {
-$is_in_debug_mode = $env['DEBUG'];
-} else {
-    $is_in_debug_mode = false;
+if ($env === false) {
+    $env = parse_ini_file(__DIR__.'/../.env'); // local
 }
 
+if (!isset($env['DEBUG'])) {
+    $is_in_debug_mode = false;
+} else {
+    $is_in_debug_mode = $env['DEBUG'];
+}
+
+
 if ($is_in_debug_mode) { // debug stuff
-    $redirect_uri = "http://localhost/aline/auth/process-oauth.php";
+    $redirect_uri = "http://localhost/aline";
 } else {
     $redirect_uri = "https://aline.cmi-info.fr/auth/process-oauth.php";
 }
@@ -30,6 +35,7 @@ $payload = [
     'redirect_uri'=>$redirect_uri,
     'scope'=>'identify%20rpc%20email',
 ];
+
 
 $payload_string = http_build_query($payload);
 $discord_token_url = "https://discordapp.com/api/oauth2/token";
