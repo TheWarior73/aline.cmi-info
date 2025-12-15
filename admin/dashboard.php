@@ -2,9 +2,6 @@
 
 session_start();
 
-error_reporting(0);
-$_SESSION["logged_in"] = true; // DEBUG TO REMOVE
-
 if (!isset($_SESSION["logged_in"]) || $_SESSION["userData"]["discord_id"] != "526790971145453578") {
 	echo "not a valid session";
     // header("Location: ../errors/403");
