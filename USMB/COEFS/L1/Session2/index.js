@@ -142,8 +142,7 @@ const S2 = [
         "titre_long" : "Réseaux informatiques et internet",
         "notes" : {
             "CM" : 2.1,
-            "TP_CC*" : 0.297,
-            "TP_CT*" : 0.603,
+            "TP_CC*" : 0.9,
         }
     },
     {

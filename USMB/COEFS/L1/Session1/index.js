@@ -8,8 +8,8 @@ const S1 = [
         "module" : "MATHS",
         "titre_long" : "Mathématiques et applications",
         "notes" : {
-            "CM_ControleTerminal" : 2.97,
-            "CM_ControleIntermediaire" : 2.43,
+            "CM_CT" : 2.97,
+            "CM_CI" : 2.43,
             "TD" : 0.6,
         }
     },
@@ -19,8 +19,8 @@ const S1 = [
         "module" : "INFO",
         "titre_long" : "Algorithmique",
         "notes" : {
-            "CM_ControleTerminalAnticipé" : 1.26,
-            "CM_ControleIntermediaire" : 0.84,
+            "CM_CTA" : 1.26,
+            "CM_CI" : 0.84,
             "TP" : 0.9,
         }
     },
@@ -40,7 +40,7 @@ const S1 = [
         "module" : "ETRS",
         "titre_long" : "Mathématiques pour le numérique 1",
         "notes" : {
-            "CM_ControleTerminalAnticipé" : 2.1,
+            "CM_CTA" : 2.1,
             "TP" : 0.9,
         }
     },
@@ -50,7 +50,7 @@ const S1 = [
         "module" : "ETRS",
         "titre_long" : "Systèmes numériques",
         "notes" : {
-            "CM_ControleTerminalAnticipé" : 2.1,
+            "CM_CTA" : 2.1,
             "TP_CR" : 0.603,
             "TP_competence" : 0.297,
         }
@@ -145,8 +145,7 @@ const S2 = [
         "titre_long" : "Réseaux informatiques et internet",
         "notes" : {
             "CM" : 2.1,
-            "TP_CC" : 0.297,      
-            "TP_CT" : 0.603,  
+            "TP_CC" : 0.9,
         }
     },
     {
@@ -215,10 +214,8 @@ const S2 = [
         "module" : "MOD",
         "titre_long" : "Orientation et métiers",
         "notes" : {
-            "Dossier" : 0.5,
-            "Rapport" : 0.5,
-            "Oral" : 0.5,
-            "Écrit" : 0.5,
+            "CM" : 1.5,
+            "Dossier" : 0.5
         }
     },
     {

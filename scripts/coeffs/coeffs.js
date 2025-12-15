@@ -173,7 +173,8 @@ function keep_notes(inputs) {
     let notes_remplies = [];
 
     for (let i=0; i<inputs.length; i++) {
-        if (!inputs[i].value == "") {
+        // On ne traite pas les "coefs = 0", c'est l'AIPE qui fait des dingueries dans les MCC
+        if (inputs[i].value != "" && inputs[i].className != "0" ) {
             notes_remplies.push(inputs[i]);
         }
     }

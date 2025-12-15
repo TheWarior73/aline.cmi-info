@@ -65,15 +65,16 @@ session_start();
             Calcul semestres 1 et 2 de la première année
         </p>
 
-        <h2 id="pagesNav"><a href="./L2">Licence 2</a></h2>
+        <!-- Caché pour l'instant, WIP revenez + tard :3 -->
+        <h2 id="pagesNav"><a href="#">Licence 2</a></h2>
         <p>
-            Calcul semestres 1 et 2 de la seconde année
+            Calcul semestres 1 et 2 de la seconde année. Actuellement désactivé. On as pas calculé les coefs :3
         </p>
 
-        <h2 id="pagesNav"><a href="./L2">Licence 3</a></h2>
+        <!-- <h2 id="pagesNav"><a href="">Licence 3</a></h2>
         <p>
             Calcul semestres 1 et 2 de la troisième année
-        </p>
+        </p> -->
 
         <h2>La suite plus tard (Soon™)</h2>
 
