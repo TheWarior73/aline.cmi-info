@@ -47,36 +47,39 @@ session_start();
             </li>
         </ul>
 
-        <h1>Calcul de moyenne par semestre</h1>
+        <h1>Calcul de moyenne par session</h1>
 
-        <!-- INFO NEW 2025-2026 -->
-
-        <div class="info">
-            <h2>Calculateur 2025-2026 maintenant en ligne !</h2>
-            <p>
-                Le calculateur as été mis à jour avec les coefficients de l'année universitaire 2025-2026 pour la L1 et L2 !
-                <br>
-                <span>Date: <code>Dec. 15. 2025</code></span>
-            </p>
-        </div>
-
-        <h2 id="pagesNav"><a href="./L1">Licence 1</a></h2>
+        <h2 id="pagesNav"><a href="./Session1/">Session 1</a></h2>
         <p>
-            Calcul semestres 1 et 2 de la première année
+            Calcul Session 1 Semestre 1 et 2 seconde année
+        </p>
+        
+        <h2 id="pagesNav"><a href="./Session2/">Session 2</a></h2>
+        <p>
+            Calcul Session 2 Semestre 1 et 2 seconde année
         </p>
 
-        <!-- Caché pour l'instant, WIP revenez + tard :3 -->
-        <h2 id="pagesNav"><a href="#">Licence 2</a></h2>
+        <h2>Bon à savoir :</h2>
         <p>
-            Calcul semestres 1 et 2 de la seconde année. Actuellement désactivé. On as pas calculé les coefs :3
+            Pour calculer sa moyenne, il faut résoudre l'equation suivante :<br>
+            (note0 * coeff0) + (note1 * coeff1) + ... + (noteN * coeffN) / (coeff0 + coeff1 + ... + coeffN)
         </p>
-
-        <!-- <h2 id="pagesNav"><a href="">Licence 3</a></h2>
         <p>
-            Calcul semestres 1 et 2 de la troisième année
-        </p> -->
-
-        <h2>La suite plus tard (Soon™)</h2>
+            Où : note0 ... noteN = les notes du semetres <br>
+            Et : coeff0 ... coeffN sont les coefficients associés aux notes.
+        </p>
+        <p>
+            coeff0 ... coeffN se calculent en prenant le coefficient du poids modulaire indiqué sur le MCC. ex : MATH103 <br>
+            Poids modulaire : 5.4 <br>
+            coeff : <br>
+            - CC1 : 45% <br>
+            - CC2 : 55%
+        </p>
+        <p>
+            Alors : coeff CC1 = 5.4*0.45 = 2.43<br>
+            et coeff CC2 = 5.4*0.55 ~ 2.97 <br>
+            tot = 5.4
+        </p>
 
     </main>
 </body>

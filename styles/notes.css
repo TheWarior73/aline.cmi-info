@@ -61,6 +61,11 @@ div.info *::selection {
     background-color: var(--info-background);
 }
 
+div.info code {
+    color: var(--info);
+    background: var(--info-background);
+}
+
 
 
 
@@ -89,6 +94,11 @@ div.error *::selection {
     background-color: var(--error-background);
 }
 
+div.error code {
+    color: var(--error);
+    background: var(--error-background);
+}
+
 
 
 
@@ -115,4 +125,9 @@ div.success *::-moz-selection {
 div.success *::selection {
     color: var(--success);
     background-color: var(--success-background);
+}
+
+div.success code {
+    color: var(--success);
+    background: var(--success-background);
 }

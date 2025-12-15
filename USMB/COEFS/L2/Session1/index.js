@@ -8,9 +8,10 @@ const S1 = [
         "module" : "MATHS",
         "titre_long" : "Mathématiques et applications",
         "notes" : {
-            "CM_CT" : 2.97,
-            "CM_CI" : 2.43,
-            "TD" : 0.6,
+            "CM_ControleContinu" : 2.43,
+            "CM_ControleTerminal" : 2.97,
+            "TD" : 0.45,
+            "TP" : 0.15
         }
     },
     {
@@ -19,8 +20,8 @@ const S1 = [
         "module" : "INFO",
         "titre_long" : "Algorithmique",
         "notes" : {
-            "CM_CTA" : 1.26,
-            "CM_CI" : 0.84,
+            "CM_ControleContinu" : 0.84,
+            "CM_ControleTerminal" : 1.26,
             "TP" : 0.9,
         }
     },
@@ -30,8 +31,8 @@ const S1 = [
         "module" : "INFO",
         "titre_long" : "Langages du Web 1",
         "notes" : {
-            "CM" : 1.8,
-            "TP" : 1.2,
+            "CM" : 1.5,
+            "TP" : 1.5,
         }
     },
     {
@@ -40,7 +41,7 @@ const S1 = [
         "module" : "ETRS",
         "titre_long" : "Mathématiques pour le numérique 1",
         "notes" : {
-            "CM_CTA" : 2.1,
+            "CM_ControleTerminal" : 2.1,
             "TP" : 0.9,
         }
     },
@@ -50,9 +51,9 @@ const S1 = [
         "module" : "ETRS",
         "titre_long" : "Systèmes numériques",
         "notes" : {
-            "CM_CTA" : 2.1,
-            "TP_CR" : 0.603,
-            "TP_competence" : 0.297,
+            "CM_ControleTerminal" : 2.1,
+            "TP_connaissance" : 0.6,
+            "TP_competence" : 0.3,
         }
     },
     {
@@ -71,8 +72,7 @@ const S1 = [
         "module" : "MOD",
         "titre_long" : "Méthodologie du travail universitaire",
         "notes" : {
-            "Oral" : 0.5,
-            "Dossier" : 0.5
+            "AIPE101" : 1
         }
     },
     {
@@ -81,7 +81,7 @@ const S1 = [
         "module" : "MOD",
         "titre_long" : "Intégration à la vie universitaire",
         "notes" : {
-            "COMUN AIPE101 ^^^^^^" : 0
+            "AIPE102" : 1
         }
     },
     {
@@ -120,7 +120,9 @@ const S1 = [
         "module" : "INDIV",
         "titre_long" : "Domotique",
         "notes" : {
-            "TP" : 6,
+            "CC" : 4.2,
+            "CC1_competence" : 1.494,
+            "CC2_competence" : 0.306
         }
     },
 ];
@@ -145,7 +147,8 @@ const S2 = [
         "titre_long" : "Réseaux informatiques et internet",
         "notes" : {
             "CM" : 2.1,
-            "TP_CC" : 0.9,
+            "TP_CC" : 0.297,      
+            "TP_CT" : 0.603,  
         }
     },
     {
@@ -214,8 +217,10 @@ const S2 = [
         "module" : "MOD",
         "titre_long" : "Orientation et métiers",
         "notes" : {
-            "CM" : 1.5,
-            "Dossier" : 0.5
+            "Dossier" : 0.5,
+            "Rapport" : 0.5,
+            "Oral" : 0.5,
+            "Écrit" : 0.5,
         }
     },
     {

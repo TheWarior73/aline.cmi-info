@@ -10,7 +10,7 @@ session_start();
     <link rel="stylesheet" href="../../coefs.css">
     <link rel="stylesheet" href="/styles/nav.css">
     <script type="module" src="./index.js"></script>
-    <title>Coefs - L1</title>
+    <title>Coefs - L2</title>
 
 
     <!-- Preload Scripts -->
@@ -74,21 +74,22 @@ session_start();
 
         <div class="annee">
 
-            <h1>Première année - Session 2</h1>
+            <h1>Seconde année - Session 1</h1>
+
             <div class="error">
                 <p>Le calcul ne s'effectue que sur les notes entrées, si un champ est laissé vide, il n'est pas compté</p>
             </div>
-
+            
             <div class="success">
                 <p>
-                    <a href="../Session1/" style="font-weight: 600;">Aller a la session 1</a>
+                    <a href="../Session2/" style="font-weight: 600;">Aller a la session 2</a>
                 </p>
                 <p>
                     <a href="#s2" style="font-weight: 600;">Voir le semestre 2</a>
                 </p>
                 <ul class="chevron">
                     <li>
-                        <a href="/.github/grades_calc/grade_calc_Licence_1_session1.html" style="font-weight: 600;" download="">Télécharger le fichier</a>
+                        <a href="/.github/grades_calc/grade_calc_Licence_1_session2.html" style="font-weight: 600;" download="">Télécharger le fichier</a>
                     </li>
                 </ul>
             </div>
@@ -98,22 +99,12 @@ session_start();
                 <p>
                     Calcul semestre 1, les options se trouvent a la fin du formulaire
                 </p>
-                <p>
-                    <b>*</b> après le nom d'une note signifie un report de la note
-                    <br>
-                    <b>**</b> après le nom d'une note indique que les modalitées sont différentes en fonction de l'option
-                </p>
             </div>
                 
             <div class="deux">
                 <h2 id="s2">Semestre 2</h2>
                 <p>
                     Calcul semestre 2, les options se trouvent a la fin du formulaire
-                </p>
-                <p>
-                    <b>*</b> après le nom d'une note signifie un report de la note
-                    <br>
-                    <b>**</b> après le nom d'une note indique que les modalitées sont différentes en fonction de l'option
                 </p>
             </div>
         </div>

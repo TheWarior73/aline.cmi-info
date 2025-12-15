@@ -10,7 +10,7 @@ session_start();
     <link rel="stylesheet" href="../../coefs.css">
     <link rel="stylesheet" href="/styles/nav.css">
     <script type="module" src="./index.js"></script>
-    <title>Coefs - L1</title>
+    <title>Coefs - L2</title>
 
 
     <!-- Preload Scripts -->
@@ -41,7 +41,7 @@ session_start();
         </ul>
 
         <div id="topNote"></div>
-
+        
         <!-- DEPRECATED -->
         <!-- <div class="info">
             <h2 style="margin: 0 10px;">Note : Le calcul de note peut être cassé</h2>
