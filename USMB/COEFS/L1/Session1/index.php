@@ -9,7 +9,7 @@ session_start();
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="../../coefs.css">
     <link rel="stylesheet" href="/styles/nav.css">
-    <script async src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
     <title>Coefs - L1</title>
 
 
@@ -17,7 +17,7 @@ session_start();
     <script src="/scripts/global/nav.js"></script>                              <!-- gets the current dir -->
     
 </head>
-<body onload="html_onload()">
+<body>
     <header>
         <a href="/">
             <img src="/img/four_leaf_pfp.jpg" alt="Pfp">
@@ -40,7 +40,10 @@ session_start();
             </li>
         </ul>
 
-        <div class="info">
+        <div id="topNote"></div>
+
+        <!-- DEPRECATED -->
+        <!-- <div class="info">
             <h2 style="margin: 0 10px;">Note : Le calcul de note peut être cassé</h2>
             <ul class="chevron" style="margin: 5px 10px;">
                 <li>
@@ -66,7 +69,7 @@ session_start();
                 </p>
             </div>
 
-        </div>
+        </div> -->
 
 
         <div class="annee">

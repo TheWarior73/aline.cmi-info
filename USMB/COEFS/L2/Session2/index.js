@@ -8,9 +8,9 @@ const S1 = [
         "module" : "MATHS",
         "titre_long" : "Mathématiques et applications",
         "notes" : {
-            "CM_ControleTerminal" : 2.97,
-            "CM_ControleIntermediaire" : 2.43,
-            "TD" : 0.6,
+            "CM_ControleTerminal" : 5.4,
+            "TD*" : 0.45,
+            "TP*" : 0.15
         }
     },
     {
@@ -19,9 +19,8 @@ const S1 = [
         "module" : "INFO",
         "titre_long" : "Algorithmique",
         "notes" : {
-            "CM_ControleTerminalAnticipé" : 1.26,
-            "CM_ControleIntermediaire" : 0.84,
-            "TP" : 0.9,
+            "CM_ControleTerminal" : 2.1,
+            "TP*" : 0.9,
         }
     },
     {
@@ -30,8 +29,8 @@ const S1 = [
         "module" : "INFO",
         "titre_long" : "Langages du Web 1",
         "notes" : {
-            "CM" : 1.8,
-            "TP" : 1.2,
+            "CM*" : 1.5,
+            "TP*" : 1.5,
         }
     },
     {
@@ -40,8 +39,8 @@ const S1 = [
         "module" : "ETRS",
         "titre_long" : "Mathématiques pour le numérique 1",
         "notes" : {
-            "CM_ControleTerminalAnticipé" : 2.1,
-            "TP" : 0.9,
+            "CM_ControleTerminal" : 2.1,
+            "TP*" : 0.9,
         }
     },
     {
@@ -50,9 +49,9 @@ const S1 = [
         "module" : "ETRS",
         "titre_long" : "Systèmes numériques",
         "notes" : {
-            "CM_ControleTerminalAnticipé" : 2.1,
-            "TP_CR" : 0.603,
-            "TP_competence" : 0.297,
+            "CM_ControleTerminal" : 2.1,
+            "TP_connaissance*" : 0.6,
+            "TP_competence*" : 0.3,
         }
     },
     {
@@ -71,8 +70,7 @@ const S1 = [
         "module" : "MOD",
         "titre_long" : "Méthodologie du travail universitaire",
         "notes" : {
-            "Oral" : 0.5,
-            "Dossier" : 0.5
+            "AIPE101*" : 1
         }
     },
     {
@@ -81,7 +79,7 @@ const S1 = [
         "module" : "MOD",
         "titre_long" : "Intégration à la vie universitaire",
         "notes" : {
-            "COMUN AIPE101 ^^^^^^" : 0
+            "AIPE102*" : 1
         }
     },
     {
@@ -90,7 +88,7 @@ const S1 = [
         "module" : "MOD",
         "titre_long" : "Enseignement d'ouverture (conf / climat / sport)",
         "notes" : {
-            "OPTION" : 1
+            "OPTION**" : 1
         }
     },
     {
@@ -100,8 +98,8 @@ const S1 = [
         "titre_long" : "Statistique descriptive",
         "notes" : {
             "CM" : 2.25,
-            "TD" : 0.45,
-            "TP" : 0.3
+            "TD*" : 0.45,
+            "TP*" : 0.3
         }
     },
     {
@@ -111,7 +109,7 @@ const S1 = [
         "titre_long" : "Logique et ensembles",
         "notes" : {
             "CM" : 2.4,
-            "TD" : 0.6
+            "TD*" : 0.6
         }
     },
     {
@@ -120,7 +118,9 @@ const S1 = [
         "module" : "INDIV",
         "titre_long" : "Domotique",
         "notes" : {
-            "TP" : 6,
+            "CC*" : 4.2,
+            "CC1_competence*" : 1.494,
+            "CC2_competence*" : 0.306
         }
     },
 ];
@@ -132,10 +132,9 @@ const S2 = [
         "module" : "MATHS",
         "titre_long" : "Algèbre 2",
         "notes" : {
-            "CM_CC1" : 1.2,
-            "CM_CC2" : 1.2,
-            "TD" : 0.45,
-            "TP": 0.15,
+            "CM_CT" : 2.4,
+            "TD*" : 0.45,
+            "TP*": 0.15,
         }
     },
     {
@@ -145,8 +144,8 @@ const S2 = [
         "titre_long" : "Réseaux informatiques et internet",
         "notes" : {
             "CM" : 2.1,
-            "TP_CC" : 0.297,      
-            "TP_CT" : 0.603,  
+            "TP_CC*" : 0.297,
+            "TP_CT*" : 0.603,
         }
     },
     {
@@ -155,8 +154,8 @@ const S2 = [
         "module" : "ETRS",
         "titre_long" : "Electronique programmable",
         "notes" : {
-            "CM_ControleTerminal" : 2.25,
-            "TP" : 0.75,
+            "CM_CT" : 2.25,
+            "TP*" : 0.75,
         }
     },
     {
@@ -165,8 +164,8 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Systèmes d'exploitation",
         "notes" : {
-            "CM_ControleTerminal" : 1.8,
-            "TP" : 1.2,
+            "CM_CT" : 1.8,
+            "TP*" : 1.2,
         }
     },
     {
@@ -175,8 +174,8 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Programmation et algorithmique",
         "notes" : {
-            "CM_CC" : 1.8 ,
-            "TP" : 1.2 ,
+            "CM_CT" : 1.8,
+            "TP*" : 1.2,
         }
     },
     {
@@ -185,8 +184,8 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Languages du Web 2",
         "notes" : {
-            "CM_CC" : 1.5 ,
-            "TP" : 1.5 ,
+            "CM_CT" : 1.5,
+            "TP*" : 1.5,
         }
     },
     {
@@ -196,7 +195,7 @@ const S2 = [
         "titre_long" : "Mathématiques pour le numérique 2",
         "notes" : {
             "CM_CT" : 2.4,
-            "TP_CC" : 0.6,
+            "TP_CC*" : 0.6,
         }
     },
     {
@@ -205,8 +204,7 @@ const S2 = [
         "module" : "MOD",
         "titre_long" : "Anglais SceM",
         "notes" : {
-            "Écrit/Oral" : 2.4 ,
-            "Travail personnel" : 0.6,
+            "CT" : 3,
         }
     },
     {
@@ -215,10 +213,10 @@ const S2 = [
         "module" : "MOD",
         "titre_long" : "Orientation et métiers",
         "notes" : {
-            "Dossier" : 0.5,
-            "Rapport" : 0.5,
-            "Oral" : 0.5,
-            "Écrit" : 0.5,
+            "Dossier*" : 0.5,
+            "Rapport*" : 0.5,
+            "Oral*" : 0.5,
+            "Écrit*" : 0.5,
         }
     },
     {
@@ -227,7 +225,7 @@ const S2 = [
         "module" : "OPTION",
         "titre_long" : "Nutrition / Conférences / sport",
         "notes" : {
-            "Note" : 1,
+            "Note**" : 1,
         }
     },
 
@@ -238,7 +236,7 @@ const S2 = [
         "module" : "INFO",
         "titre_long" : "Projet multidisciplinaire",
         "notes" : {
-            "Note" : 3,
+            "Note*" : 3,
         }
     },
     {
@@ -247,9 +245,8 @@ const S2 = [
         "module" : "MATHS",
         "titre_long" : "Analyse",
         "notes" : {
-            "CM_CC1" : 1.2,
-            "CM_CC2" : 1.2,
-            "TD" : 0.6,
+            "CM_CT" : 2.4,
+            "TD*" : 0.6,
         }
     },
 ];
