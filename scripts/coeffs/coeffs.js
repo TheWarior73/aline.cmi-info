@@ -1,5 +1,5 @@
 // ONLOAD
-import { showDisclaimer, showInfo } from "./disclaimer";
+import { showDisclaimer, showInfo } from "./disclaimer.js";
 
 const showInformation = true;
 
