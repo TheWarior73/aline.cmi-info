@@ -66,7 +66,7 @@ session_start();
         </p>
 
         <!-- Caché pour l'instant, WIP revenez + tard :3 -->
-        <h2 id="pagesNav"><a href="#">Licence 2</a></h2>
+        <h2 id="pagesNav"><a href="./L2">Licence 2</a></h2>
         <p>
             Calcul semestres 1 et 2 de la seconde année. Actuellement désactivé. On as pas calculé les coefs :3
         </p>

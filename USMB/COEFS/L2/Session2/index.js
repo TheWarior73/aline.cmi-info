@@ -4,155 +4,9 @@ import {loadSemesters} from "/scripts/coeffs/coeffs.js"
 const S1 = [
     {
         "option" : false,
-        "titre" : "MATHS103",
+        "titre" : "MATHS301",
         "module" : "MATHS",
-        "titre_long" : "Mathématiques et applications",
-        "notes" : {
-            "CM_ControleTerminal" : 5.4,
-            "TD*" : 0.45,
-            "TP*" : 0.15
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "INFO101",
-        "module" : "INFO",
-        "titre_long" : "Algorithmique",
-        "notes" : {
-            "CM_ControleTerminal" : 2.1,
-            "TP*" : 0.9,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "INFO102",
-        "module" : "INFO",
-        "titre_long" : "Langages du Web 1",
-        "notes" : {
-            "CM*" : 1.5,
-            "TP*" : 1.5,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "ETRS101",
-        "module" : "ETRS",
-        "titre_long" : "Mathématiques pour le numérique 1",
-        "notes" : {
-            "CM_ControleTerminal" : 2.1,
-            "TP*" : 0.9,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "ETRS102",
-        "module" : "ETRS",
-        "titre_long" : "Systèmes numériques",
-        "notes" : {
-            "CM_ControleTerminal" : 2.1,
-            "TP_connaissance*" : 0.6,
-            "TP_competence*" : 0.3,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "ANGL101",
-        "module" : "MOD",
-        "titre_long" : "Anglais",
-        "notes" : {
-            "ANGLAIS" : 3
-        }
-    },
-    //les évaluation d'AIPE101 et AIPE102 sont commune à l'exeption des notes d'oraux et ceux qui on une note inférieure à 10/20
-    {
-        "option" : false,
-        "titre" : "AIPE101",
-        "module" : "MOD",
-        "titre_long" : "Méthodologie du travail universitaire",
-        "notes" : {
-            "AIPE101*" : 1
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "AIPE102",
-        "module" : "MOD",
-        "titre_long" : "Intégration à la vie universitaire",
-        "notes" : {
-            "AIPE102*" : 1
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "OPTION",
-        "module" : "MOD",
-        "titre_long" : "Enseignement d'ouverture (conf / climat / sport)",
-        "notes" : {
-            "OPTION**" : 1
-        }
-    },
-    {
-        "option" : true,
-        "titre" : "MATHS104",
-        "module" : "INDIV",
-        "titre_long" : "Statistique descriptive",
-        "notes" : {
-            "CM" : 2.25,
-            "TD*" : 0.45,
-            "TP*" : 0.3
-        }
-    },
-    {
-        "option" : true,
-        "titre" : "MATHS105",
-        "module" : "INDIV",
-        "titre_long" : "Logique et ensembles",
-        "notes" : {
-            "CM" : 2.4,
-            "TD*" : 0.6
-        }
-    },
-    {
-        "option" : true,
-        "titre" : "ETRS103",
-        "module" : "INDIV",
-        "titre_long" : "Domotique",
-        "notes" : {
-            "CC*" : 4.2,
-            "CC1_competence*" : 1.494,
-            "CC2_competence*" : 0.306
-        }
-    },
-];
-
-const S2 = [
-    {
-        "option" : false,
-        "titre" : "MATH204",
-        "module" : "MATHS",
-        "titre_long" : "Algèbre 2",
-        "notes" : {
-            "CM_CT" : 2.4,
-            "TD*" : 0.45,
-            "TP*": 0.15,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "ETRS201",
-        "module" : "ETRS",
-        "titre_long" : "Réseaux informatiques et internet",
-        "notes" : {
-            "CM" : 2.1,
-            "TP_CC*" : 0.297,
-            "TP_CT*" : 0.603,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "ETRS202",
-        "module" : "ETRS",
-        "titre_long" : "Electronique programmable",
+        "titre_long" : "Algèbre 3",
         "notes" : {
             "CM_CT" : 2.25,
             "TP*" : 0.75,
@@ -160,93 +14,282 @@ const S2 = [
     },
     {
         "option" : false,
-        "titre" : "INFO201",
-        "module" : "INFO",
-        "titre_long" : "Systèmes d'exploitation",
+        "titre" : "MATHS302",
+        "module" : "MATHS",
+        "titre_long" : "Algèbre 4",
         "notes" : {
-            "CM_CT" : 1.8,
-            "TP*" : 1.2,
+            "CM_CT" : 2.25,
+            "TP" : 0.75,
+        }
+    },
+
+    // *** --- ***
+
+    {
+        "option" : false,
+        "titre" : "INFO301",
+        "module" : "WEB",
+        "titre_long" : "Langages et environements du WEB",
+        "notes" : {
+            "CM_CT" : 2.1,
+            "TP*" : 0.9,
         }
     },
     {
         "option" : false,
-        "titre" : "INFO202",
-        "module" : "INFO",
-        "titre_long" : "Programmation et algorithmique",
+        "titre" : "INFO306",
+        "module" : "WEB",
+        "titre_long" : "bases de données",
         "notes" : {
-            "CM_CT" : 1.8,
-            "TP*" : 1.2,
+            "CM_CT" : 2.1,
+            "TP*" : 0.9,
+        }
+    },
+
+    // *** --- ***
+
+    {
+        "option" : false,
+        "titre" : "ETRS301",
+        "module" : "Ordinateurs & Réseaux",
+        "titre_long" : "Structure et fonctionnement des ordinateurs",
+        "notes" : {
+            "CM_CT" : 2.25,
+            "TP*" : 0.75,
         }
     },
     {
         "option" : false,
-        "titre" : "INFO203",
-        "module" : "INFO",
-        "titre_long" : "Languages du Web 2",
+        "titre" : "ETRS302",
+        "module" : "Ordinateurs & Réseaux",
+        "titre_long" : "Réseaux informatiques et protocoles",
         "notes" : {
-            "CM_CT" : 1.5,
-            "TP*" : 1.5,
+            "CM_CT" : 2.25,
+            "TP*" : 0.75,
+        }
+    },
+
+    // *** --- ***
+
+    {
+        "option" : true,
+        "titre" : "INFO303",
+        "module" : "PROG.",
+        "titre_long" : "Programmation Impérative",
+        "notes" : {
+            "CM_CT" : 2.25,
+            "TP*" : 0.75,
+        }
+    },
+    {
+        "option" : true,
+        "titre" : "INFO305",
+        "module" : "PROG.",
+        "titre_long" : "Programmation Orientée Objet",
+        "notes" : {
+            "CM_CT" : 2.1,
+            "TP*" : 0.9,
+        }
+    },
+    
+    // *** --- ***
+
+    {
+        "option" : true,
+        "titre" : "ETRS303",
+        "module" : "COMP. PROG.",
+        "titre_long" : "Systèmes Embarqués",
+        "notes" : {
+            "CM_CT" : 2.25,
+            "TP*" : 0.75,
+        }
+    },
+    {
+        "option" : true,
+        "titre" : "ETRS305",
+        "module" : "COMP. PROG.",
+        "titre_long" : "Systèmes Séquentiels",
+        "notes" : {
+            "CM_CT" : 2.25,
+            "TP*" : 0.75,
+        }
+    },
+
+    // *** --- ***
+
+    {
+        "option" : false,
+        "titre" : "ANGL301",
+        "module" : "MODULAIRE",
+        "titre_long" : "Anglais",
+        "notes" : {
+            "TD_Ecrit_Oral*" : 1.8,
+            "TD_Pratique*" : 0.6,
+            "Autonomie*" : 0.6,
         }
     },
     {
         "option" : false,
-        "titre" : "INFO205",
-        "module" : "INFO",
-        "titre_long" : "Mathématiques pour le numérique 2",
+        "titre" : "AIPE301",
+        "module" : "MODULAIRE",
+        "titre_long" : "Techniques de Communication Ecrite",
         "notes" : {
-            "CM_CT" : 2.4,
-            "TP_CC*" : 0.6,
+            "TD*" : 1,
         }
     },
     {
         "option" : false,
-        "titre" : "ANGL201",
-        "module" : "MOD",
-        "titre_long" : "Anglais SceM",
+        "titre" : "AIPE302",
+        "module" : "MODULAIRE",
+        "titre_long" : "Techniques de Communication Orale",
         "notes" : {
-            "CT" : 3,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "AIPE201",
-        "module" : "MOD",
-        "titre_long" : "Orientation et métiers",
-        "notes" : {
-            "Dossier*" : 0.5,
-            "Rapport*" : 0.5,
-            "Oral*" : 0.5,
-            "Écrit*" : 0.5,
+            "TD*" : 1,
         }
     },
     {
         "option" : false,
         "titre" : "OPTION",
-        "module" : "OPTION",
-        "titre_long" : "Nutrition / Conférences / sport",
+        "module" : "MODULAIRE",
+        "titre_long" : "Conférences / sport / Autre...",
         "notes" : {
-            "Note**" : 1,
+            "Note*" : 1,
+        }
+    },
+];
+
+const S2 = [
+    {
+        "option" : false,
+        "titre" : "INFO402",
+        "module" : "POO_DATA",
+        "titre_long" : "Programation Orientée Objet 2",
+        "notes" : {
+            "CM_CT" : 2.1,
+            "TP*": 0.9,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "INFO410",
+        "module" : "POO_DATA",
+        "titre_long" : "Structure de Données Classiques",
+        "notes" : {
+            "CM_CT" : 2.1,
+            "TP*": 0.9,
         }
     },
 
+    // *** --- ***
 
     {
-        "option" : true,
-        "titre" : "INFO204",
-        "module" : "INFO",
-        "titre_long" : "Projet multidisciplinaire",
+        "option" : false,
+        "titre" : "INFO403",
+        "module" : "C_MAT",
+        "titre_long" : "Programation C",
         "notes" : {
-            "Note*" : 3,
+            "CM_CT" : 2.1,
+            "TP*": 0.9,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "ETRS401",
+        "module" : "C_MAT",
+        "titre_long" : "introduction télécom",
+        "notes" : {
+            "CM_CT" : 2.25,
+            "TP*": 0.75,
+        }
+    },
+
+    // *** --- ***
+
+    {
+        "option" : false,
+        "titre" : "INFO405",
+        "module" : "BDD_PROJ",
+        "titre_long" : "Projet de programmation",
+        "notes" : {
+            "TD_Pratique*" : 2.01,
+            "Soutenance*": 0.99,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "INFO411",
+        "module" : "BDD_PROJ",
+        "titre_long" : "Serveur et technologies WEB",
+        "notes" : {
+            "CM_CT" : 2.1,
+            "TP*": 0.9,
+        }
+    },
+
+    // *** --- ***
+    
+    {
+        "option" : true,
+        "titre" : "INFO406",
+        "module" : "PROG_FONCT",
+        "titre_long" : "Programmation fonctionelle 1",
+        "notes" : {
+            "CM_CTA" : 2.1,
+            "TP*": 0.9,
         }
     },
     {
         "option" : true,
-        "titre" : "MATH202",
-        "module" : "MATHS",
-        "titre_long" : "Analyse",
+        "titre" : "INFO407",
+        "module" : "PROG_FONCT",
+        "titre_long" : "Programmation fonctionelle 2",
         "notes" : {
-            "CM_CT" : 2.4,
-            "TD*" : 0.6,
+            "CM_Ecrit_Oral*" : 3,
+        }
+    },
+
+    // *** --- ***
+
+    {
+        "option" : true,
+        "titre" : "INFO408",
+        "module" : "LPRO",
+        "titre_long" : "Preparation Licence Pro 1",
+        "notes" : {
+            "CM_CT" : 2.1,
+            "TP*": 0.9,
+        }
+    },
+    {
+        "option" : true,
+        "titre" : "INFO409",
+        "module" : "LPRO",
+        "titre_long" : "Preparation Licence Pro 2",
+        "notes" : {
+            "CM_CT" : 2.1,
+            "TP*": 0.9,
+        }
+    },
+
+    // *** --- ***
+
+    {
+        "option" : false,
+        "titre" : "ANGL401",
+        "module" : "MODULAIRE",
+        "titre_long" : "Anglais",
+        "notes" : {
+            "Oral*" : 2.4,
+            "Autonomie*": 0.6,
+        }
+    },
+    {
+        "option" : false,
+        "titre" : "TEDS402",
+        "module" : "MODULAIRE",
+        "titre_long" : "Enjeux et transition écologique",
+        "notes" : {
+            "CM_CCI*" : 2.1,
+            "TD*": 0.9,
         }
     },
 ];

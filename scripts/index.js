@@ -8,6 +8,7 @@ const comments = [
     "(Sending much love <3)",
     "(click meeeeeeeeeeee)",
     "(>:3c)",
+    "(meow :3)",
 ]
 
 var index;

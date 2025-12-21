@@ -84,7 +84,8 @@ function html_note(nom_note, coef) {
     div_note.id = "section";
 
     let input = document.createElement("input");
-    input.type = "number";
+    input.type = "text";
+    input.inputMode = "numeric"
     input.placeholder = nom_note + " - Coef : " + coef;
     input.className = coef; // pour le récupérer plus tard
 

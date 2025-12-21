@@ -1,16 +1,19 @@
 <?php
 
 if (!isset($_GET["code"])) {
-    echo "no code";
-    exit();
+    header("Location: /errors/400");
+    return;
 }
 
-$env = parse_ini_file(__DIR__.'/../../.env');
+$path = __DIR__ . '/../../.env';
 
-if ($env === false) {
-    $env = parse_ini_file(__DIR__.'/../.env'); // local
+if (!file_exists($path)) {
+    $path = __DIR__ . '/../.env';
 }
 
+$env = parse_ini_file($path);
+
+// debug shit
 if (!isset($env['DEBUG'])) {
     $is_in_debug_mode = false;
 } else {
@@ -85,7 +88,7 @@ $result = json_decode($result, true);
 // session starting
 if ($result["id"] != "526790971145453578") { // magic number
 
-    header("Location: ../errors/403");
+    header("Location: /errors/403");
 
 } else {
     session_start();
@@ -95,5 +98,5 @@ if ($result["id"] != "526790971145453578") { // magic number
         "discord_id"=> $result["id"],
     ];
        
-    header("Location: ../admin/dashboard");
+    header("Location: /admin/dashboard");
 }

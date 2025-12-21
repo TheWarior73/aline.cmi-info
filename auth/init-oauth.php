@@ -1,10 +1,12 @@
 <?php
 
-$env = parse_ini_file(__DIR__.'/../../.env');
+$path = __DIR__ . '/../../.env';
 
-if ($env === false) {
-    $env = parse_ini_file(__DIR__.'/../.env'); // local
+if (!file_exists($path)) {
+    $path = __DIR__ . '/../.env';
 }
+
+$env = parse_ini_file($path);
 
 if (!isset($env['DEBUG'])) {
     $is_in_debug_mode = false;
@@ -19,6 +21,6 @@ if ($is_in_debug_mode) { // debug stuff
 }
 
 header("Location: $discord_url");
-exit();
+exit;
 
 ?>
