@@ -325,7 +325,7 @@ session_start();
 
             <div id="center-column">
                 <a href="https://github.com/TheWarior73" style="user-select: none;min-height:185px;display:inline-block;">
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TheWarior73&theme=transparent&show_icons=true&hide_border=true&layout=compact&title_color=4E9F3D&icon_color=3a6743&text_color=cfcfcf&border_color=191A19" alt="">
+                    <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=TheWarior73&theme=transparent&show_icons=true&hide_border=true&layout=compact&title_color=4E9F3D&icon_color=3a6743&text_color=cfcfcf&border_color=191A19" alt="">
                 </a>                
                 <div>
                     <h1>Current Projects</h1>
@@ -337,7 +337,7 @@ session_start();
 
             <div id="right-column">
                 <a href="https://github.com/TheWarior73" style="user-select: none;min-height:185px;display:inline-block;">
-                    <img src="https://github-readme-stats.vercel.app/api?username=TheWarior73&show_icons=true&theme=transparent&hide=stars&title_color=4E9F3D&icon_color=3a6743&text_color=cfcfcf&border_color=191A19" alt="github stats">
+                    <img src="https://github-readme-stats-fast.vercel.app/api?username=TheWarior73&show_icons=true&theme=transparent&hide=stars&title_color=4E9F3D&icon_color=3a6743&text_color=cfcfcf&border_color=191A19" alt="github stats">
                 </a>
                 <div id="quick_links">
                     <h1>Quick Links</h1>

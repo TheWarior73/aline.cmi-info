@@ -9,7 +9,7 @@ session_start();
     <!-- Style Sheets -->
         <!-- GLOBAL -->
     <link rel="stylesheet" href="/styles/global.css">
-
+    
         <!-- Page related sheets -->
     <link rel="stylesheet" href="/styles/index.css">
 

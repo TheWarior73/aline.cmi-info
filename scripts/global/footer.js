@@ -16,11 +16,14 @@ else {
     // Create footer first (and adds it to the bottom of the page)
     footerDOM = document.createElement("footer");
     add_to_footer();
-    footerDOM.classList.add("dev")
     
     document.querySelector("body").appendChild(footerDOM);
 }
 
+
+if (isDev) {
+    footerDOM.classList.add("dev")
+}
 
 function add_to_footer() {
     let div = document.createElement("div");

@@ -68,13 +68,13 @@ session_start();
         <!-- Caché pour l'instant, WIP revenez + tard :3 -->
         <h2 id="pagesNav"><a href="./L2">Licence 2</a></h2>
         <p>
-            Calcul semestres 1 et 2 de la seconde année. Actuellement désactivé. On as pas calculé les coefs :3
+            Calcul semestres 1 et 2 de la seconde année
         </p>
 
-        <!-- <h2 id="pagesNav"><a href="">Licence 3</a></h2>
+        <h2 id="pagesNav"><a href="#">Licence 3</a></h2>
         <p>
-            Calcul semestres 1 et 2 de la troisième année
-        </p> -->
+            Calcul semestres 1 et 2 de la troisième année. Actuellement désactivé. On as pas calculé les coefs :3
+        </p>
 
         <h2>La suite plus tard (Soon™)</h2>
 
