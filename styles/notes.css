@@ -131,3 +131,15 @@ div.success code {
     color: var(--success);
     background: var(--success-background);
 }
+
+
+
+
+
+/* ====== === =  >:3c  = === ====== */
+/* ======= == [ Other ] == ======== */
+/* ====== === =  >:3c  = === ====== */
+
+div.no_icon::before {
+    content: none;
+}

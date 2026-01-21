@@ -51,7 +51,7 @@ session_start();
 
         <div id="intro"> <!-- Unused ID -->
             <h1>Collection of miscellaneous stuff</h1>
-            <p><code>Find all the stuff that I share</code>, this can range from Miscworks to poetry, and pretty much everything that I want to share outside of prog.
+            <p><code>Find all the stuff that I share</code>, this can range from misc works to poetry, and pretty much everything that I want to share outside of prog.
             Sometimes friends works can appear as well !</p>
         </div>
 

@@ -33,7 +33,12 @@ function add_to_footer() {
     
     let link = document.createElement("a");
     link.href = "https://github.com/TheWarior73/aline.cmi-info";
-    link.innerHTML = "Source";
+    
+    if (isDev) {
+        link.innerHTML = "DevMode"; // More dev stuff
+    } else {   
+        link.innerHTML = "Source";
+    }
 
     let year_content = new Date().getFullYear();
     let year = document.createTextNode(year_content)

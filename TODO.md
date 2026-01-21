@@ -5,8 +5,6 @@
 ---
 # REWORK
 
-- COEFS [ core ]
-
 
 ---
 # REDO
@@ -17,4 +15,4 @@
 
 - Localize
 - Guide de survie du L1
-- COEFS [L2]
+- COEFS [L3+]

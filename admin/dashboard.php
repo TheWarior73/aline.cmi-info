@@ -4,7 +4,7 @@ session_start();
 
 if (!isset($_SESSION["logged_in"]) || $_SESSION["userData"]["discord_id"] != "526790971145453578") {
 	echo "not a valid session";
-    // header("Location: ../errors/403");
+    header("Location: /errors/403");
 }
 
 ?>
@@ -31,7 +31,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["userData"]["discord_id"] != "52
     <!-- Preload Scripts -->
     <script src="/scripts/global/nav.js"></script>                          <!-- gets the current dir --> <!-- Include whenever not in /root -->
 </head>
-<body>
+<body onload="getnav()">
     <header>
         <a href="/">
             <img src="/img/four_leaf_pfp.jpg" alt="Pfp">
@@ -50,7 +50,11 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["userData"]["discord_id"] != "52
     </header>
 
     <main>
-        
+        <ul class="navigation">
+            <li>
+            </li>
+        </ul>
+
     <div class="container">
         <div id="left-column">
             
@@ -67,13 +71,6 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["userData"]["discord_id"] != "52
             <div id="quick_links">
                 <h1>Quick Actions</h1>
                 <p> 
-                    <a href="#">
-                        New Post «
-                    </a>
-                </p>
-                <p>
-                    <a href="#">
-                        Update last post «
                     </a>
                 </p>
             </div>
