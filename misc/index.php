@@ -77,6 +77,22 @@ session_start();
             </p>
         </div>
 
+        
+        <div class="Misc">
+            <h2>Maia <code>Friend</code></h2>
+            <h3 id="pagesNav">
+                <a href="./maia">
+                    Recueil de Poems
+                </a>
+            </h3>
+            <p>
+                » "A one of a kind poet I tell ya" - Me someday probably.
+                <br>
+                Collection of poems.
+            </p>
+        </div> 
+       
+
         <!-- 
         <div class="Misc">
             <h2><code>Friend</code> placeholder</h2>

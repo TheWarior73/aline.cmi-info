@@ -38,6 +38,7 @@
     padding: 10px;
     border-radius: 18px;
     margin: 20px 0;
+    position: relative;
 
     .success {
         h2 input, h3 input {
@@ -83,4 +84,26 @@
     background-color: var(--secondary);
     font-size: 17px;
     transition: .3s;
+}
+
+newPoem {
+    border-radius: 64px;
+
+    padding: 0px 10px;
+    
+    font-weight: 900;
+    
+    color: var(--error);
+    background-color: rgba(from var(--error-background)r g b / .15);
+    
+    display: inline-block;
+    rotate: -30deg;
+    
+    position: absolute;
+    left: -18px;
+    top: -8px;
+}
+
+newPoem::before {
+    content: "NEW";
 }
