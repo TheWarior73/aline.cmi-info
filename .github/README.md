@@ -10,7 +10,7 @@ If you wish to use my work for other purposes, I do grant permission to use it a
 > I have provided offline file.s for the grade calculator, find [them here](./grades_calc), you can find online files over [there](http://aline.cmi-info.fr/USMB/COEFS/) (you do not have to download anything to use it)
 
 > [!INFO]
-> While there is currently only the 1st Year calculator, I plan on adding the 2nd and 3rd year once I get more data about grades and coefficients.
+> 1st & Second year calculators are available !
 
 <div align="center">
 <strong> Made with </strong>

@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* COEFFS.css */
+
+        .semestre {
+    background: var(--secondary500);
+    border-radius: 16px;
+    margin: 0 -15px;
+}
+
+.module {
+    background-color: var(--success-background);
+    
+    border-radius: 16px;
+    overflow: clip;
+
+    margin: 5px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid var(--secondary);
+    box-shadow: 0 0 10px var(--secondary);
+}
+
+.module p {
+    margin: 5px 0;
+}
+
+#ModNum {
+    width: fit-content;
+    
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+    padding: 2px 15px;
+    margin: 0 0 5px 0;
+
+    background-color: var(--secondary);
+}
+
+#ModTitle {
+    margin: -5px 0 5px 0;
+    width: fit-content;
+    
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+
+    padding: 2px 15px;
+
+    background-color: var(--tertiary500);
+    color: var(--main);
+}
+
+#section {
+    background-color: var(--secondary);
+    margin: 5px 0;
+    padding: 5px 15px;
+
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.module input {
+    border-radius: 16px;
+    border: none;
+
+    padding: 0 15px;
+    height: 25px;
+    width: 250px;
+
+    background: rgba(from var(--main) r g b / 0.75);
+    color: var(--accent);
+}
+
+.bouton {
+    display: flex;
+    margin: 5px;
+}
+
+.bouton button{
+    background: var(--secondary);
+    color: var(--accent);
+
+    border: none;
+    border-radius: 16px;
+    margin-right: 15px;
+
+    transition: .3s;
+}
+
+.bouton button:hover {
+    cursor: pointer;
+    background-color: var(--tertiary500);
+    color: var(--main);
+
+    transition: .3s;
+}
+
+.bouton p {
+    margin: 0;
+}
+
+    </style>
+
+    <style>
+        /* NOTES.css */
+        
+        /* |=============| */
+        /* |    NOTES    | */
+        /* |=============| */
+
+        /* General */
+        div.info, div.error, div.success {
+            border-left: 3px solid;
+            margin: 10px 0;
+
+            padding: 10px 7px;
+            border-radius: 0 8px 8px 0;
+        
+            display:flex;
+            flex-direction: column;
+        }
+
+        div.info *, div.error *, div.success * {
+            text-align: left;
+        }
+
+        div.info p, div.error p, div.success p {
+            margin: 5px 10px;
+            color: var(--light-gray);
+        }
+
+        div.info h1, div.error h1, div.success h1,
+        div.info h2, div.error h2, div.success h2,
+        div.info h3, div.error h3, div.success h3  {
+            margin: 5px 10px;
+        }
+
+        div.info::before, div.error::before, div.success::before {
+            width: fit-content;
+        
+            position: relative;
+        
+            padding: 2px 10px;
+            border-radius: 1rem;
+        }
+
+        /* ====== === =  >:3c  = === ====== */
+        /* ======== == [ INFO ] == ======== */
+        /* ====== === =  >:3c  = === ====== */
+        div.info {
+            border-color: var(--info);
+            background-color: var(--info-background);
+        }
+
+        div.info::before {
+            content: url("/img/svg/info_outline.svg"); /* Custom colors not         follwing vars in media */
+        }
+
+        /* The two of you should learn to cooperate, it's getting annoying */
+        div.info *::-moz-selection {
+            color: var(--info);
+            background-color: var(--info-background);
+        }
+
+        div.info *::selection {
+            color: var(--info);
+            background-color: var(--info-background);
+        }
+
+        div.info code {
+            color: var(--info);
+            background: var(--info-background);
+        }
+
+
+
+
+
+        /* ====== === =  >:3c  = === ====== */
+        /* ======== == [ Error ] == ======== */
+        /* ====== === =  >:3c  = === ====== */
+
+        div.error {
+            border-color: var(--error);
+            background-color: var(--error-background);
+        }
+
+        div.error::before {
+            content: url("/img/svg/warning_amber.svg"); /* Custom colors not        follwing vars in media */
+        }
+
+        /* Sighs... */
+        div.error *::-moz-selection {
+            color: var(--error);
+            background-color: var(--error-background);
+        }
+
+        div.error *::selection {
+            color: var(--error);
+            background-color: var(--error-background);
+        }
+
+        div.error code {
+            color: var(--error);
+            background: var(--error-background);
+        }
+
+
+
+
+
+        /* ====== === =  >:3c  = === ====== */
+        /* ======== == [ success ] == ======== */
+        /* ====== === =  >:3c  = === ====== */
+
+        div.success {
+            border-color: var(--success);
+            background-color: var(--success-background);
+        }
+
+        div.success::before {
+            content: url("/img/svg/done_all.svg"); /* Custom colors not follwing        vars in media */
+        }
+
+        /* I don't know what to say anymore... */
+        div.success *::-moz-selection {
+            color: var(--success);
+            background-color: var(--success-background);
+        }
+
+        div.success *::selection {
+            color: var(--success);
+            background-color: var(--success-background);
+        }
+
+        div.success code {
+            color: var(--success);
+            background: var(--success-background);
+        }
+
+
+
+
+
+        /* ====== === =  >:3c  = === ====== */
+        /* ======= == [ Other ] == ======== */
+        /* ====== === =  >:3c  = === ====== */
+
+        div.no_icon::before {
+            content: none;
+        }
+    </style>
+
+    <style>
+        /* GLOBAL.css */
+
+        /* ====== === =  >:3c  = === ====== */
+        /* ======== == [ VARS ] == ======== */
+        /* ====== === =  >:3c  = === ====== */
+
+        :root {
+            --main: #191A19;
+            --main100:#535353;
+            --main500:#363736;
+            --secondary: #1E5128;
+            --secondary100:#567d5e;
+            --secondary500:#3a6743;
+            --tertiary: #4E9F3D;
+            --tertiary100:#7ab76e;
+            --tertiary500:#64ab55;
+            --accent: rgba(207, 207, 207, 0.9);
+        
+            --info: oklch(70% 0.165 254.624);
+            --info-background: oklch(70% 0.165 254.624 / 0.15);
+        
+            --error: oklch(64% 0.246 16.439);
+            --error-background: oklch(64% 0.246 16.439 / 0.15);
+        
+            --success: oklch(72% 0.219 149.579);
+            --success-background: oklch(72% 0.219 149.579 / 0.15);
+        
+            --light-gray: #ffffffa0;
+        
+            --pfp-border-radius: 64px;
+            --h1-underline: 5px;
+            --h2-underline: 3px;
+            --h3-underline: 2px;
+        }
+
+        /* je sais plus a quoi ça sert lmao ? */
+        /* color {
+            color: #00c84faa;
+        } */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--main);
+            color: var(--accent);
+            font-family:"Lexend", sans-serif;
+            line-height: 1.5em;
+            text-justify: inter-word;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+
+        /*
+        2 for the same thing, but mr moz-selection is a crybaby and breaks the css      if put with selection.
+        */
+        ::-moz-selection {
+            color: var(--accent);
+            background-color: var(--secondary);
+        }
+
+        ::selection {
+            color: var(--accent);
+            background-color: var(--secondary);
+        }
+
+        ul.chevron {
+            list-style-type:'❯❯ ';
+        }
+
+
+
+
+
+        /* ==== [ Header ] ==== */
+
+        header {
+            font-size: 1.25em;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header a img {
+            max-height: 75px;
+            max-width: 75px;
+            border-radius: var(--pfp-border-radius);
+            margin: 0 10px;
+        }
+
+        header a {
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        header nav ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+        }
+
+        header nav ul li {
+            list-style-type:none;
+            padding: 0 10px;
+        }
+
+        header nav ul li a {
+            transition: .3s;
+            color: var(--secondary);
+        }
+
+        header nav ul li a:hover {
+            transition: .3s;
+            color: var(--tertiary);
+        }
+
+        header nav ul li a#active {
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+            text-decoration-color: var(--secondary100);
+            color: var(--tertiary);
+            transition: .3s;
+        }
+
+        header nav ul li a#active:hover {
+            text-decoration-color: var(--tertiary100);
+        }
+
+
+
+
+
+
+        /* ==========[ Main ]========== */
+
+        /* NAVIGATION */
+        main ul.navigation li {
+            list-style-type: none;
+        }
+
+        main ul.navigation li a {
+            color: var(--secondary);
+            text-decoration-color: var(--secondary);
+            text-decoration-thickness: var(--h2-underline);
+        }
+
+        main ul.navigation li a:hover {
+            color: var(--accent);
+            text-decoration-color: var(--tertiary);
+        }
+
+        main ul.navigation li a#active {
+            color: var(--tertiary);
+            text-decoration-color: var(--tertiary);
+        }
+
+        main ul.navigation li a#active:hover {
+            text-decoration-color: var(--accent);
+        }
+        /* End Nav */
+
+
+
+
+
+        main {
+            display: flex;
+            min-height: 85vh;
+            flex-direction: column;
+            padding: 0 10%;
+        }
+
+        main a {
+            color: var(--accent);
+            transition: .3s;
+        }
+
+        main a:hover {
+            color: var(--tertiary);
+            transition: .3s;
+        }
+
+        main code {
+            color: var(--secondary);
+            font-family: sans-serif;
+            background-color: var(--tertiary100);
+            border-radius: 10px;
+            padding: 1px 5px;
+        }
+
+        main u {
+            text-decoration-color: var(--secondary500);
+            text-decoration-thickness: 3px;
+        }
+
+        main  h1 {
+            text-decoration: underline;
+            text-decoration-thickness: var(--h1-underline);
+            text-decoration-color: var(--tertiary);
+            transition: .3s;
+        }
+
+        main h2 a {
+            text-decoration-color: var(--tertiary);
+            transition: .3s;
+            text-decoration-thickness: var(--h1-underline);
+        }
+
+        main h2 a:hover {
+            text-decoration-color: var(--accent);
+            transition: .3s;
+        }
+
+        #pagesNav {
+            margin-bottom: 0;
+        }
+
+        .placeholderDiv {
+            display: flex;
+            flex: 1;
+        }
+
+
+
+
+
+
+        /* ==== [ Footer ] ==== */
+
+        footer {
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            position: sticky;
+            padding: 42px 0 8px 0;
+            background: linear-gradient(
+                rgba(from var(--main) r g b / 0.1),
+                var(--main) 65%
+                );
+        }
+
+        footer.dev {
+           background: linear-gradient(
+                rgba(from var(--error) r g b / 0.1),
+                var(--error) 65%
+                ); 
+            width: 100vw !important;
+            margin-left: -8px;
+        }
+
+        footer a {
+            color: var(--main100);
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        footer a:hover {
+            color: var(--tertiary);
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+            transition: .3s;
+        }
+
+        footer #links {
+            text-align: center;
+            font-size: 1em;
+        }
+
+        #redirect {
+            stroke-width: 2px;
+            fill: none;
+            color: var(--accent);
+            height: 16px;
+            width: 16px;
+            align-self: flex-end;
+            margin-left: 3px;
+        }
+
+
+
+
+
+        /* responsive (crazy right) */
+        @media screen and (width < 551px) {
+            /* Header to hamburger (hopefully) */
+            #header_aline {
+                display: none;
+            }
+        }
+
+        @media screen and (width < 439px) {
+            /* Will be usefull once the hamburger stuff will have been set up */
+            /* nav {
+                display: none;
+            } */
+        }
+
+    </style>
+
+    <script>
+        // MODULES
+        const S1 = [
+            {
+                "option" : false,
+                "titre" : "MATHS301",
+                "module" : "MATHS",
+                "titre_long" : "Algèbre 3",
+                "notes" : {
+                    "CM_CTA" : 2.25,
+                    "TP" : 0.75,
+                }
+            },
+            {
+                "option" : false,
+                "titre" : "MATHS302",
+                "module" : "MATHS",
+                "titre_long" : "Algèbre 4",
+                "notes" : {
+                    "CM_CT" : 2.25,
+                    "TP" : 0.75,
+                }
+            },
+        
+            // *** --- ***
+        
+            {
+                "option" : false,
+                "titre" : "INFO301",
+                "module" : "WEB",
+                "titre_long" : "Langages et environements du WEB",
+                "notes" : {
+                    "CM_CTA" : 2.1,
+                    "TP" : 0.9,
+                }
+            },
+            {
+                "option" : false,
+                "titre" : "INFO306",
+                "module" : "WEB",
+                "titre_long" : "Bases de données",
+                "notes" : {
+                    "CM_CT" : 2.1,
+                    "TP" : 0.9,
+                }
+            },
+        
+            // *** --- ***
+        
+            {
+                "option" : false,
+                "titre" : "ETRS301",
+                "module" : "Ordinateurs & Réseaux",
+                "titre_long" : "Structure et fonctionnement des ordinateurs",
+                "notes" : {
+                    "CM_CTA" : 2.25,
+                    "TP" : 0.75,
+                }
+            },
+            {
+                "option" : false,
+                "titre" : "ETRS302",
+                "module" : "Ordinateurs & Réseaux",
+                "titre_long" : "Réseaux informatiques et protocoles",
+                "notes" : {
+                    "CM_CT" : 2.25,
+                    "TP" : 0.75,
+                }
+            },
+        
+            // *** --- ***
+        
+            {
+                "option" : true,
+                "titre" : "INFO303",
+                "module" : "PROG.",
+                "titre_long" : "Programmation Impérative",
+                "notes" : {
+                    "CM_CTA" : 2.25,
+                    "TP" : 0.75,
+                }
+            },
+            {
+                "option" : true,
+                "titre" : "INFO305",
+                "module" : "PROG.",
+                "titre_long" : "Programmation Orientée Objet",
+                "notes" : {
+                    "CM_CT" : 2.1,
+                    "TP" : 0.9,
+                }
+            },
+
+            // *** --- ***
+        
+            {
+                "option" : true,
+                "titre" : "ETRS303",
+                "module" : "COMP. PROG.",
+                "titre_long" : "Systèmes Embarqués",
+                "notes" : {
+                    "CM_CT" : 2.25,
+                    "TP" : 0.75,
+                }
+            },
+            {
+                "option" : true,
+                "titre" : "ETRS305",
+                "module" : "COMP. PROG.",
+                "titre_long" : "Systèmes Séquentiels",
+                "notes" : {
+                    "CM_CT" : 2.25,
+                    "TP" : 0.75,
+                }
+            },
+        
+            // *** --- ***
+        
+            {
+                "option" : false,
+                "titre" : "ANGL301",
+                "module" : "MODULAIRE",
+                "titre_long" : "Anglais",
+                "notes" : {
+                    "TD_Ecrit_Oral" : 1.8,
+                    "TD_Pratique" : 0.6,
+                    "Autonomie" : 0.6,
+                }
+            },
+            {
+                "option" : false,
+                "titre" : "AIPE301",
+                "module" : "MODULAIRE",
+                "titre_long" : "Techniques de Communication Ecrite",
+                "notes" : {
+                    "TD" : 1,
+                }
+            },
+            {
+                "option" : false,
+                "titre" : "AIPE302",
+                "module" : "MODULAIRE",
+                "titre_long" : "Techniques de Communication Orale",
+                "notes" : {
+                    "TD" : 1,
+                }
+            },
+            {
+                "option" : false,
+                "titre" : "OPTION",
+                "module" : "MODULAIRE",
+                "titre_long" : "Conférences / sport / Autre...",
+                "notes" : {
+                    "Note" : 1,
+                }
+            },
+        ];
+
+        const S2 = [
+            {
+                "option" : false,
+                "titre" : "INFO402",
+                "module" : "POO_DATA",
+                "titre_long" : "Programation Orientée Objet 2",
+                "notes" : {
+                    "CM_CTA" : 2.1,
+                    "TP": 0.9,
+                }
+            },
+            {
+                "option" : false,
+                "titre" : "INFO410",
+                "module" : "POO_DATA",
+                "titre_long" : "Structure de Données Classiques",
+                "notes" : {
+                    "CM_CTA" : 2.1,
+                    "TP": 0.9,
+                }
+            },
+        
+            // *** --- ***
+        
+            {
+                "option" : false,
+                "titre" : "INFO403",
+                "module" : "C_MAT",
+                "titre_long" : "Programation C",
+                "notes" : {
+                    "CM_CT" : 2.1,
+                    "TP": 0.9,
+                }
+            },
+            {
+                "option" : false,
+                "titre" : "ETRS401",
+                "module" : "C_MAT",
+                "titre_long" : "introduction télécom",
+                "notes" : {
+                    "CM_CTA" : 2.25,
+                    "TP": 0.75,
+                }
+            },
+        
+            // *** --- ***
+        
+            {
+                "option" : false,
+                "titre" : "INFO405",
+                "module" : "BDD_PROJ",
+                "titre_long" : "Projet de programmation",
+                "notes" : {
+                    "TD_Pratique" : 2.01,
+                    "Soutenance": 0.99,
+                }
+            },
+            {
+                "option" : false,
+                "titre" : "INFO411",
+                "module" : "BDD_PROJ",
+                "titre_long" : "Serveur et technologies WEB",
+                "notes" : {
+                    "CM_CT" : 2.1,
+                    "TP": 0.9,
+                }
+            },
+        
+            // *** --- ***
+
+            {
+                "option" : true,
+                "titre" : "INFO406",
+                "module" : "PROG_FONCT",
+                "titre_long" : "Programmation fonctionelle 1",
+                "notes" : {
+                    "CM_CTA" : 2.1,
+                    "TP": 0.9,
+                }
+            },
+            {
+                "option" : true,
+                "titre" : "INFO407",
+                "module" : "PROG_FONCT",
+                "titre_long" : "Programmation fonctionelle 2",
+                "notes" : {
+                    "CM_Ecrit_Oral" : 3,
+                }
+            },
+        
+            // *** --- ***
+        
+            {
+                "option" : true,
+                "titre" : "INFO408",
+                "module" : "LPRO",
+                "titre_long" : "Preparation Licence Pro 1",
+                "notes" : {
+                    "CM_CT" : 2.1,
+                    "TP": 0.9,
+                }
+            },
+            {
+                "option" : true,
+                "titre" : "INFO409",
+                "module" : "LPRO",
+                "titre_long" : "Preparation Licence Pro 2",
+                "notes" : {
+                    "CM_CT" : 2.1,
+                    "TP": 0.9,
+                }
+            },
+        
+            // *** --- ***
+        
+            {
+                "option" : false,
+                "titre" : "ANGL401",
+                "module" : "MODULAIRE",
+                "titre_long" : "Anglais",
+                "notes" : {
+                    "Oral" : 2.4,
+                    "Autonomie": 0.6,
+                }
+            },
+            {
+                "option" : false,
+                "titre" : "TEDS402",
+                "module" : "MODULAIRE",
+                "titre_long" : "Enjeux et transition écologique",
+                "notes" : {
+                    "CM_CCI" : 2.1,
+                    "TD": 0.9,
+                }
+            },
+        ];
+    </script>
+
+    <script>
+        // Disclaimer
+        /**
+         * 
+         * @param {String} elt 
+         * @param {String} c 
+         * @param {String} id 
+         * @param {HTMLElement} parent 
+         * @returns HTMLElement
+         */
+        function createElement(elt, c=null, id=null, parent=null) {
+            let res = document.createElement(elt)
+        
+            if (c != null) {
+                res.classList = c
+            }
+        
+            if (id != null) {
+                res.id = id
+            }
+        
+            if (parent != null) {
+                parent.appendChild(res)
+            }
+        
+            return res
+        }
+
+
+        // *** ============== *** //
+
+        /**
+         * Shows the info note at the top of the calc page
+         * As well as the disclaimer
+         */
+        function showInfo(parent) {
+            let info = getInfo()
+            parent.appendChild(info)
+        }
+
+
+        // *** ============== *** //
+
+        /**
+         * Shows the disclaimer on the page
+         */
+        function showDisclaimer(parent) {
+            let disclaimer = getDisclaimer()
+            parent.appendChild(disclaimer)
+        }
+
+        // *** ============== *** //
+        // *** ============== *** //
+        // *** ============== *** //
+
+        /**
+         * Generates the info note for the calc page
+         * @returns the info DOM elt
+         */
+        function getInfo() {
+            let disclaimer = getDisclaimer()
+            let info = createElement("div", "info", null, null)
+
+            let title = createElement("h2", null, null, info)
+            title.style.margin = "0 10p;"
+            title.innerHTML = "Note : Le calcul de note peut être cassé"
+        
+            let ul = createElement("ul", "chevron", null, info)
+            ul.style.margin = "5px 10px"
+        
+                // Li
+                let liGit = createElement("li", null, null, ul)
+                liGit.innerHTML = 'Pensez a faire un report de bug <a       href="https://github.com/TheWarior73/aline.cmi-info/issues"     style="font-weight: 600;">sur le github</a>'
+        
+                let liMail = createElement("li", null, null, ul)
+                liMail.innerHTML = 'Ou a envoyer un mail a <a       href="mailto:bellotew@etu.univ-smb.fr" style="font-weight: 600;     text-decoration: underline;">bellotew@etu.univ-smb.fr</a>'
+        
+                let liDiscord = createElement("li", null, null, ul)
+                liDiscord.innerHTML = 'Contact discord possible si vous le      connaisez.'
+        
+            // end
+            info.appendChild(disclaimer)
+        
+            return info
+        }
+
+        // *** ============== *** //
+
+        /**
+         * Generates the disclaimer note for the calc page
+         * @returns the disclaimer DOM elt
+         */
+        function getDisclaimer() {
+            let disclaimer = createElement("div", "error", null, null)
+        
+            let title = createElement("h2", null, null, disclaimer)
+            title.innerHTML = "Disclaimer : "
+
+            let p1 = createElement("p", null, null, disclaimer)
+            p1.innerHTML = "Ce calculateur n'as aucune validitée juridique, son         but est de fournir un calcul automatisé de moyennes, il peut être       erroné."
+
+            let p2 = createElement("p", null, null, disclaimer)
+            p2.innerHTML = "Pensez a revérifier vos moyennes en cas de doutes !"
+        
+            return disclaimer
+        }
+
+
+        // Coeffs.js
+        // ONLOAD
+
+        const showInformation = true;
+
+        function loadSemesters(S1, S2) {
+            // charge les semestres :
+            let noteDiv = document.querySelector("#topNote")
+            if (showInformation) {
+                // SHOW INFO
+                showInfo(noteDiv)
+            } else {
+                // ONLY DISCLAIMER
+                showDisclaimer(noteDiv)
+            }
+        
+            html_semestre(S1, ".un");
+            html_semestre(S2, ".deux");
+        }
+        
+        
+        // HTML CONSTRUCTOR
+        function html_semestre(modules, semestre_nb) {
+            let semestre = document.querySelector(semestre_nb); // semestre : ".        un" ou ".deux"
+        
+            let liste_options = [];
+        
+            // on parcours les modules a créer
+            for (let i=0; i<modules.length; i++) {
+                if (modules[i]["option"] === false) { // pas une option (les        options a la fin)
+                    let module = html_module(modules[i]);
+                    semestre.appendChild(module);
+                } else {
+                    liste_options.push(modules[i]);
+                }
+            }
+        
+            // au tour des options
+            let h3_opt = document.createElement("h3");
+            h3_opt.innerHTML = "Options";
+            semestre.appendChild(h3_opt);
+        
+            for (let i=0; i<liste_options.length; i++) {
+                let module = html_module(liste_options[i]);
+                semestre.appendChild(module);
+            }
+        
+            // finalement on ajoute un bouton pour calculer
+            let bouton = bouton_html()
+            semestre.appendChild(bouton);
+        } 
+        
+        
+        function html_module(module) {
+            let div_module = document.createElement("div");
+            div_module.className = "module";
+        
+            let titre = document.createElement("p");
+            titre.innerHTML = module["titre"];
+            titre.id = "ModNum";
+            
+            let titre_long = document.createElement("p");
+            titre_long.innerHTML = module["titre_long"];
+            titre_long.id = "ModTitle";
+        
+            let moyenne = document.createElement("p");
+            moyenne.innerHTML = "moyenne : N/A";
+            moyenne.id = "moyenne";
+        
+            div_module.appendChild(titre);
+            div_module.appendChild(titre_long);
+            div_module.appendChild(moyenne)
+        
+            for (let elt in module["notes"]) {
+                let tmp = html_note(elt, module["notes"][elt]);
+                div_module.appendChild(tmp);
+            }
+        
+            return div_module;
+        }
+        
+        function html_note(nom_note, coef) {
+            let div_note = document.createElement("div");
+            div_note.id = "section";
+        
+            let input = document.createElement("input");
+            input.type = "text";
+            input.inputMode = "numeric"
+            input.placeholder = nom_note + " - Coef : " + coef;
+            input.className = coef; // pour le récupérer plus tard
+        
+            div_note.appendChild(input);
+            return div_note;
+        }
+        
+        function bouton_html() {
+            let div_bouton = document.createElement("div");
+            div_bouton.className = "bouton"
+            
+            let bouton = document.createElement("button");
+            bouton.innerHTML = "Calculer la moyenne";
+            bouton.addEventListener("click", calcule_moyenne);
+            
+            let para = document.createElement("p");
+            para.innerHTML = "Moyenne : N/A";
+        
+            div_bouton.appendChild(bouton);
+            div_bouton.appendChild(para)
+            return div_bouton;
+        }
+        
+        // CALCULS MOYENNES
+        
+        
+        /**
+         * Calcul moyenne :
+         * (note0 * coeff0) + (note1 * coeff1) + ... + (noteN * coeffN) / (coeff0       + coeff1 + ... + coeffN)
+         */
+        function calcule_moyenne(event) {
+            let div_parent = event.target.parentNode;
+            let parent = div_parent.parentNode;
+        
+            let html_moyenneG = div_parent.childNodes[1]; // p moyenne G
+            let moyenneG = 0.0;
+            let nb_modules = 0;
+        
+            let childs = parent.childNodes;
+        
+            // on récupère les modules
+            let modules = get_modules(childs);
+        
+            // pour chaque module, on prends les notes remplies et leurs coefs
+            for (let i=0; i<modules.length; i++) {  
+                let sections = get_sections(modules[i]);
+                // on verifie si il y a une note, sinon on ne la garde pas
+                let NotesAGarder = keep_notes(sections);
+                if (NotesAGarder.length != 0) { // il y a une ou plusieures notes       dans le module.
+                    let moy_module = calcule_module(NotesAGarder);
+                
+                    update_module(moy_module[0], modules[i]);
+                    moyenneG = moyenneG + parseFloat(moy_module[0]);
+                    nb_modules++;
+                }
+            }
+            update_moyenneG(html_moyenneG, moyenneG, nb_modules);
+        }
+        
+        function get_modules(childs) {
+            let modules = [];
+        
+            for (let i=0; i<childs.length; i++) {
+                if (childs[i].className == "module") {
+                    modules.push(childs[i]);
+                }
+            }
+            return modules;
+        }
+        
+        function get_sections(module) {
+            let sections = [];
+            let childs = module.childNodes;
+        
+            for (let i=0; i<childs.length; i++) {
+                if (childs[i].id == "section") {
+                    if (childs[i].children[0].tagName == "INPUT") {
+                        sections.push(childs[i].children[0]);
+                    }
+                }
+            }
+            return sections;
+        }
+        
+        function keep_notes(inputs) {
+            let notes_remplies = [];
+        
+            for (let i=0; i<inputs.length; i++) {
+                // On ne traite pas les "coefs = 0", c'est l'AIPE qui fait des      dingueries dans les MCC
+                if (inputs[i].value != "" && inputs[i].className != "0" ) {
+                    notes_remplies.push(inputs[i]);
+                }
+            }
+            return notes_remplies;
+        }
+        
+        
+        function calcule_module(liste_notes) {
+            //on parcourt la liste des notes
+            let coeff = 0.0;
+            let notes = 0.0;
+            
+            for (let i=0; i<liste_notes.length; i++) {
+                // value == note
+                // class == coeff
+                let temp_val = parseFloat(liste_notes[i].value)
+                if (temp_val > 20) {
+                    temp_val = 20.0;
+                    console.log("Valeur reçue supérieure a 20, abaissement a 20/        20")
+                }
+                
+                // calcul & ajout moy module
+                coeff = coeff + parseFloat(liste_notes[i].className)
+            
+                // notes + (note * coeff)
+                notes = notes + (temp_val * parseFloat(liste_notes[i].className))
+            }
+            let moyenne = notes/coeff
+            moyenne = sanitizeFloatingPointErrors(moyenne) // removes imperfections
+            return [moyenne, coeff]
+        }
+        
+        function update_module(moyenne, module) {
+        
+            let moyenne_html = module.querySelector("#moyenne")
+            moyenne_html.innerHTML = "Moyenne : " + moyenne
+        }
+        
+        function sanitizeFloatingPointErrors(x) {
+          return Number.parseFloat(x).toFixed(3);
+        }
+        
+        function update_moyenneG(elt, moyenne, nb_notes) {
+        
+            let res = moyenne/nb_notes
+            elt.innerHTML = "Moyenne : " + res;
+        }
+
+        // Load
+        function html_onload() {
+            // charge les semestres :
+            loadSemesters(S1, S2)
+        }
+
+        window.addEventListener("DOMContentLoaded", html_onload);
+    </script>
+
+    <title>Coefs - L2</title>
+</head>
+<body>
+    <header>
+        <a href="https://aline.cmi-info.fr/">
+            <span id="header_aline">
+                aline.cmi-info.fr
+            </span>
+        </a>
+    </header>
+    <main>
+        <div id="topNote"><div class="info"><h2>Note : Le calcul de note peut être cassé</h2><ul class="chevron" style="margin: 5px 10px;"><li>Pensez a faire un report de bug <a href="https://github.com/TheWarior73/aline.cmi-info/issues" style="font-weight: 600;">sur le github</a></li><li>Ou a envoyer un mail a <a href="mailto:bellotew@etu.univ-smb.fr" style="font-weight: 600; text-decoration: underline;">bellotew@etu.univ-smb.fr</a></li><li>Contact discord possible si vous le connaisez.</li></ul><div class="error"><h2>Disclaimer : </h2><p>Ce calculateur n'as aucune validitée juridique, son but est de fournir un calcul automatisé de moyennes, il peut être erroné.</p><p>Pensez a revérifier vos moyennes en cas de doutes !</p></div></div></div>
+
+        <div class="annee">
+
+            <h1>Seconde année - Session 1</h1>
+
+            <div class="error">
+                <p>Le calcul ne s'effectue que sur les notes entrées, si un champ est laissé vide, il n'est pas compté</p>
+            </div>
+            
+            <div class="success">
+                <p>
+                    <a href="http://aline/USMB/COEFS/L2/Session2/" style="font-weight: 600;">Aller a la session 2</a>
+                </p>
+                <p>
+                    <a href="#s2" style="font-weight: 600;">Voir le semestre 2</a>
+                </p>
+                <ul class="chevron">
+                    <li>
+                        <a href="http://aline/.github/grades_calc/grade_calc_Licence_1_session2.html" style="font-weight: 600;" download="">Télécharger le fichier</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="un">
+                <h2 id="s1">Semestre 1</h2>
+                <p>
+                    Calcul semestre 1, les options se trouvent a la fin du formulaire
+                </p>
+            <div class="module"><p id="ModNum">MATHS301</p><p id="ModTitle">Algèbre 3</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CTA - Coef : 2.25" class="2.25"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.75" class="0.75"></div></div><div class="module"><p id="ModNum">MATHS302</p><p id="ModTitle">Algèbre 4</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CT - Coef : 2.25" class="2.25"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.75" class="0.75"></div></div><div class="module"><p id="ModNum">INFO301</p><p id="ModTitle">Langages et environements du WEB</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CTA - Coef : 2.1" class="2.1"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.9" class="0.9"></div></div><div class="module"><p id="ModNum">INFO306</p><p id="ModTitle">Bases de données</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CT - Coef : 2.1" class="2.1"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.9" class="0.9"></div></div><div class="module"><p id="ModNum">ETRS301</p><p id="ModTitle">Structure et fonctionnement des ordinateurs</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CTA - Coef : 2.25" class="2.25"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.75" class="0.75"></div></div><div class="module"><p id="ModNum">ETRS302</p><p id="ModTitle">Réseaux informatiques et protocoles</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CT - Coef : 2.25" class="2.25"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.75" class="0.75"></div></div><div class="module"><p id="ModNum">ANGL301</p><p id="ModTitle">Anglais</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="TD_Ecrit_Oral - Coef : 1.8" class="1.8"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TD_Pratique - Coef : 0.6" class="0.6"></div><div id="section"><input type="text" inputmode="numeric" placeholder="Autonomie - Coef : 0.6" class="0.6"></div></div><div class="module"><p id="ModNum">AIPE301</p><p id="ModTitle">Techniques de Communication Ecrite</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="TD - Coef : 1" class="1"></div></div><div class="module"><p id="ModNum">AIPE302</p><p id="ModTitle">Techniques de Communication Orale</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="TD - Coef : 1" class="1"></div></div><div class="module"><p id="ModNum">OPTION</p><p id="ModTitle">Conférences / sport / Autre...</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="Note - Coef : 1" class="1"></div></div><h3>Options</h3><div class="module"><p id="ModNum">INFO303</p><p id="ModTitle">Programmation Impérative</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CTA - Coef : 2.25" class="2.25"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.75" class="0.75"></div></div><div class="module"><p id="ModNum">INFO305</p><p id="ModTitle">Programmation Orientée Objet</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CT - Coef : 2.1" class="2.1"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.9" class="0.9"></div></div><div class="module"><p id="ModNum">ETRS303</p><p id="ModTitle">Systèmes Embarqués</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CT - Coef : 2.25" class="2.25"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.75" class="0.75"></div></div><div class="module"><p id="ModNum">ETRS305</p><p id="ModTitle">Systèmes Séquentiels</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CT - Coef : 2.25" class="2.25"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.75" class="0.75"></div></div><div class="bouton"><button>Calculer la moyenne</button><p>Moyenne : N/A</p></div></div>
+                
+            <div class="deux">
+                <h2 id="s2">Semestre 2</h2>
+                <p>
+                    Calcul semestre 2, les options se trouvent a la fin du formulaire
+                </p>
+            <div class="module"><p id="ModNum">INFO402</p><p id="ModTitle">Programation Orientée Objet 2</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CTA - Coef : 2.1" class="2.1"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.9" class="0.9"></div></div><div class="module"><p id="ModNum">INFO410</p><p id="ModTitle">Structure de Données Classiques</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CTA - Coef : 2.1" class="2.1"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.9" class="0.9"></div></div><div class="module"><p id="ModNum">INFO403</p><p id="ModTitle">Programation C</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CT - Coef : 2.1" class="2.1"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.9" class="0.9"></div></div><div class="module"><p id="ModNum">ETRS401</p><p id="ModTitle">introduction télécom</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CTA - Coef : 2.25" class="2.25"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.75" class="0.75"></div></div><div class="module"><p id="ModNum">INFO405</p><p id="ModTitle">Projet de programmation</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="TD_Pratique - Coef : 2.01" class="2.01"></div><div id="section"><input type="text" inputmode="numeric" placeholder="Soutenance - Coef : 0.99" class="0.99"></div></div><div class="module"><p id="ModNum">INFO411</p><p id="ModTitle">Serveur et technologies WEB</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CT - Coef : 2.1" class="2.1"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.9" class="0.9"></div></div><div class="module"><p id="ModNum">ANGL401</p><p id="ModTitle">Anglais</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="Oral - Coef : 2.4" class="2.4"></div><div id="section"><input type="text" inputmode="numeric" placeholder="Autonomie - Coef : 0.6" class="0.6"></div></div><div class="module"><p id="ModNum">TEDS402</p><p id="ModTitle">Enjeux et transition écologique</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CCI - Coef : 2.1" class="2.1"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TD - Coef : 0.9" class="0.9"></div></div><h3>Options</h3><div class="module"><p id="ModNum">INFO406</p><p id="ModTitle">Programmation fonctionelle 1</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CTA - Coef : 2.1" class="2.1"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.9" class="0.9"></div></div><div class="module"><p id="ModNum">INFO407</p><p id="ModTitle">Programmation fonctionelle 2</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_Ecrit_Oral - Coef : 3" class="3"></div></div><div class="module"><p id="ModNum">INFO408</p><p id="ModTitle">Preparation Licence Pro 1</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CT - Coef : 2.1" class="2.1"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.9" class="0.9"></div></div><div class="module"><p id="ModNum">INFO409</p><p id="ModTitle">Preparation Licence Pro 2</p><p id="moyenne">moyenne : N/A</p><div id="section"><input type="text" inputmode="numeric" placeholder="CM_CT - Coef : 2.1" class="2.1"></div><div id="section"><input type="text" inputmode="numeric" placeholder="TP - Coef : 0.9" class="0.9"></div></div><div class="bouton"><button>Calculer la moyenne</button><p>Moyenne : N/A</p></div></div>
+        </div>
+
+    </main>
+
+<footer class="">
+    <div id="links">
+        Aline . 
+        <a href="https://github.com/TheWarior73/aline.cmi-info">Source</a> . 2026
+    </div>
+</footer>
+</body><!-- Post Load Scripts --></html>

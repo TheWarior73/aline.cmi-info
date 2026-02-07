@@ -59,9 +59,11 @@ const recueil = {
                 Mes mains, les maçons de la libertée
                 Mon chibre, le symbole de la muerte.
                 Tout ce qui se roule se fume
-                Tout ce qui se mord se hume._ Tel une perle rare; mon chibre,
+                Tout ce qui se mord se hume.
+                Tel une perle rare; mon chibre,
                 Il s'exprime, il est libre,
-                Tel un oiseau volant,_ Tel un pamplemousse coulant
+                Tel un oiseau volant,
+                Tel un pamplemousse coulant
                 Ô, mon chibre !
                 Ô, mon chibre !
                 Ô, mon envie de vivre !
