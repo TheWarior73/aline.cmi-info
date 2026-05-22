@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -27,7 +25,6 @@ session_start();
         </a>
         <nav>
             <ul>
-                <?php if (isset($_SESSION["logged_in"])){echo "<li><a href='/admin/dashboard' style='color:var(--error);'>Dashboard</a></li>";}?>
                 <li><a href="/">About Me</a></li>
                 <li><a href="/projects" id="active">Projects</a></li>
                 <li><a href="/misc">Misc Stuff</a></li>
@@ -89,7 +86,7 @@ session_start();
                 </p>
                 <ul class="chevron">
                     <li>
-                        <a href="/.github/grades_calc/grade_calc_Licence_1_session2.html" style="font-weight: 600;" download="">Télécharger le fichier</a>
+                        <a href="/.github/grades_calc/grade_calc_Licence_2_session1.html" style="font-weight: 600;" download="">Télécharger le fichier</a>
                     </li>
                 </ul>
             </div>
