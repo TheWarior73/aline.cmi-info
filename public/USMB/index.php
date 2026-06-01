@@ -50,14 +50,28 @@
             <a href="COEFS/">Grade Calculator</a><br>
             A tool to easily visualise your semester's averages for MISPI students over at USMB. (currently support 1st years, with plans to support other years as well.)
         </p>
+        <p>
+            <a href="https://github.com/lasnelus/info405_explorateurs" style="display:flex">Ptits explorateurs
+                <svg id="redirect" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2" stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                    <path d="M11 13l9 -9" />
+                    <path d="M15 4h5v5" />
+                </svg>
+            </a>
+            Projet Les petits explorateurs - 
+            <a href="https://ptits-explorateurs.cmi-info.fr/">
+                Website link !
+                <svg id="redirect" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2" stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                    <path d="M11 13l9 -9" />
+                    <path d="M15 4h5v5" />
+                </svg>
+            </a>
+        </p>
         
         <h2 id="pagesNav">Web</h2>
         <p>
-            <a href="INFO102/">INFO102</a><br>
-            Module INFO102 (L1 - S1)
-        </p>
-        <p>
-            <a href="https://jpeg.cmi-info.fr" style="display:flex">J.P.E.G.
+            <a href="https://github.com/synnfall/JPEG" style="display:flex">J.P.E.G.
                 <svg id="redirect" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2" stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
                     <path d="M11 13l9 -9" />
@@ -65,7 +79,6 @@
                 </svg>
             </a>
             Projet J.P.E.G. 
-                
         </p>
 
         <h2 id="pagesNav">Miscellaneous content</h2>
