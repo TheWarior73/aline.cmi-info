@@ -2,11 +2,14 @@ services:
     frontend:
         build:
             dockerfile: Dockerfile
-        container_name: frontend
+        container_name: aline.cmi-info.fr_frontend
         restart: unless-stopped
         ports:
             - "${PORT_GATEWAY}:80"
         environment:
             - DEBUG=${DEBUG}
+        
+        # Dans le cas ou CI/CD, décommenter ici dessous :3
+
         # volumes:
         #     - ./public:/var/www/html
