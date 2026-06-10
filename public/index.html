@@ -16,7 +16,7 @@
 
     <!-- Title -->
     <title>Home</title>
-    
+
     <!-- Preload Scripts -->
     <script></script>
 </head>
@@ -55,7 +55,8 @@
             </div>
             <div id="long_bio">
                 <p>
-                    I am a 18 yo student, studying <u>computer science</u> at Université Savoie Mont Blanc. I already
+                    I am a <span id="age">--</span> yo student, studying <u>computer science</u> at Université Savoie
+                    Mont Blanc. I already
                     have a background in CS with some projects of my own or during High School.
                 </p>
                 <p>
@@ -112,12 +113,12 @@
 
                 <div id="tools">
                     <h1>My Goals</h1>
-                
+
                     <h2>Learn</h2>
                     <p>
                         <img src="https://skillicons.dev/icons?i=unity,unreal" />
                     </p>
-                
+
                     <h2>Improve</h2>
                     <p>
                         <img src="https://skillicons.dev/icons?i=cs,figma,css,docker" />
@@ -131,10 +132,10 @@
                     <h2>Improve</h2>
                     <p>
                         <a href="https://github.com/TheWarior73" style="text-decoration: none;">
-                            <img src="https://skillicons.dev/icons?i=github" /> 
+                            <img src="https://skillicons.dev/icons?i=github" />
                         </a>
                         <a href="https://gitlab.com/AlineBellot" style="text-decoration: none;">
-                            <img src="https://skillicons.dev/icons?i=gitlab" /> 
+                            <img src="https://skillicons.dev/icons?i=gitlab" />
                         </a>
                     </p>
 
@@ -220,5 +221,27 @@
 <!-- Post Load Scripts -->
 <script src="/scripts/global/footer.js"></script>
 <script src="/scripts/index.js"></script>
+<script>
+
+    function getAge(dateString) {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+
+
+    function setAge(age) {
+        var ageSpan = document.querySelector("#age");
+        ageSpan.textContent = age;
+    }
+
+    const age = getAge("2006-12-06");
+    setAge(age);
+</script>
 
 </html>
