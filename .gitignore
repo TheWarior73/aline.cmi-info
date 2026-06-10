@@ -130,3 +130,5 @@ dist
 .pnp.*
 
 .vscode
+
+docker-compose.override.yaml
