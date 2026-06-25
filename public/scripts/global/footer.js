@@ -33,6 +33,7 @@ function add_to_footer() {
     
     let link = document.createElement("a");
     link.href = "https://github.com/TheWarior73/aline.cmi-info";
+    link.target = "_blank"
     
     if (isDev) {
         link.innerHTML = "DevMode"; // More dev stuff

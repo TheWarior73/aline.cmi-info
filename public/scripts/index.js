@@ -30,7 +30,7 @@ function get_random_comment() {
         index = index_random_comment;
     }
 
-    return document.createTextNode(comments[index_random_comment]);                     // random comment in the array
+    return document.createTextNode(comments[index]);                                    // random comment in the array
 }
 
 function change_comment() {

@@ -75,7 +75,7 @@
         </div>
 
         
-        <div class="Misc">
+        <!-- <div class="Misc">
             <h2>Maia <code>Friend</code></h2>
             <h3 id="pagesNav">
                 <a href="./maia">
@@ -87,7 +87,7 @@
                 <br>
                 Collection of poems.
             </p>
-        </div> 
+        </div>  -->
        
 
         <!-- 

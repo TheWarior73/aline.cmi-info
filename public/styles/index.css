@@ -6,7 +6,7 @@
 
 
 main #bio {
-    padding: 5% 0 5% 0 ;
+    padding: 5% 0 5% 0;
     display: flex;
     flex-direction: column;
 }
@@ -18,7 +18,7 @@ main #bio #main {
 }
 
 main #bio #main strong {
-    font-weight:550;
+    font-weight: 550;
 }
 
 main #bio #main img {
@@ -34,12 +34,56 @@ main #bio #main #name {
     align-items: center;
 }
 
-main #bio #main p, main #bio p {
+main #bio #main p,
+main #bio p {
     margin: 5px 0;
 }
 
 main #bio #main #short {
     margin: 10px 0 0 0;
+}
+
+/* 
+#5BCEFA,
+#F5A9B8,
+#FFFFFF,
+#F5A9B8,
+#5BCEFA
+*/
+
+main #bio #main #pride {
+    background: linear-gradient(90deg,
+            #5BCEFA,
+            #F5A9B8,
+            #FFFFFF,
+            #F5A9B8,
+            #5BCEFA,
+            #FFFFFF,            
+            #D52D00,
+            #FFFFFF,
+            #A30262,
+            #5BCEFA
+            );
+
+    background-size: 400% 100%;
+    display: inline-block;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    animation: aitf 15s linear infinite;
+}
+
+@keyframes aitf {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 200% 50%;
+    }
 }
 
 #bio-comment {
@@ -88,7 +132,7 @@ svg {
 /* | Quick Links | */
 /* |=============| */
 
-#quick_links p{
+#quick_links p {
     text-align: right;
 }
 
@@ -108,7 +152,7 @@ main #icons a figure {
     margin: 10px 20px;
 }
 
-main #icons a:hover figure svg{
+main #icons a:hover figure svg {
     stroke: var(--tertiary);
     fill: var(--tertiary);
     transition: .3s;
@@ -123,7 +167,10 @@ main #icons a:hover figure svg{
 MS logo colors
 */
 
-#ms-red, #ms-green, #ms-blue, #ms-yellow {
+#ms-red,
+#ms-green,
+#ms-blue,
+#ms-yellow {
     transition: .3s;
 }
 
@@ -163,7 +210,9 @@ MS logo colors
         text-align: center;
     }
 
-    #center-column, #right-column, #quick_links p {
+    #center-column,
+    #right-column,
+    #quick_links p {
         text-align: center;
         flex-direction: column-reverse;
     }
