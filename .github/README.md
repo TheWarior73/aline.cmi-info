@@ -3,8 +3,7 @@
 
 Do not copy the work located in the `/USMB/` part of this repository.\
 For obvious reasons, most of that work has been handed to college for assignments and grading, using my work in your assignments will get you in trouble.\
-If you wish to use my work for other purposes, I do grant permission to use it as long as there are no malicious intents and that all work has due recognition of it's original author/inspiration [me]
-
+If you wish to use my work for other purposes, I do grant permission to use it as long as there are no malicious intents and that all work has due recognition of it's original author/inspiration [me & classmates if any]
 
 > [!TIP]
 > I have provided offline file.s for the grade calculator, find [them here](./grades_calc), you can find online files over [there](http://aline.cmi-info.fr/USMB/COEFS/) (you do not have to download anything to use it)
@@ -21,11 +20,7 @@ If you wish to use my work for other purposes, I do grant permission to use it a
 </div>
 
 # [aline.cmi-info.fr](https://aline.cmi-info.fr)
-Is the subdomain where my website resides, it is hosted by a friend.
-
-In the even where I change hosts, or url, I keep my files backed up here. 
-It also serves a purpose to auto update the website (with a webhook)
-
+Is the subdomain where my website resides
 
 ---
 
@@ -35,6 +30,6 @@ Time wasted doing css, js, messing with svgs and writting shady php code
 
 ---
 
-This project was written by a (probably) autistic, sleep deprived and socialy awkward mind.
+This project was created by a (probably) autistic, sleep deprived and socialy awkward mind.
 
 Feel free to say hi, i'd be happy to chat !
