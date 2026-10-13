@@ -1,304 +1,321 @@
-import {loadSemesters} from "/scripts/coeffs/coeffs.js"
+import { loadSemesters } from "/scripts/coeffs/coeffs.js";
 
-// TODO MODULES
 const S1 = [
-    {
-        "option" : false,
-        "titre" : "MATHS301",
-        "module" : "MATHS",
-        "titre_long" : "Algèbre 3",
-        "notes" : {
-            "CM_CT" : 2.25,
-            "TP*" : 0.75,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "MATHS302",
-        "module" : "MATHS",
-        "titre_long" : "Algèbre 4",
-        "notes" : {
-            "CM_CT" : 2.25,
-            "TP" : 0.75,
-        }
-    },
-
-    // *** --- ***
-
-    {
-        "option" : false,
-        "titre" : "INFO301",
-        "module" : "WEB",
-        "titre_long" : "Langages et environements du WEB",
-        "notes" : {
-            "CM_CT" : 2.1,
-            "TP*" : 0.9,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "INFO306",
-        "module" : "WEB",
-        "titre_long" : "bases de données",
-        "notes" : {
-            "CM_CT" : 2.1,
-            "TP*" : 0.9,
-        }
-    },
-
-    // *** --- ***
-
-    {
-        "option" : false,
-        "titre" : "ETRS301",
-        "module" : "Ordinateurs & Réseaux",
-        "titre_long" : "Structure et fonctionnement des ordinateurs",
-        "notes" : {
-            "CM_CT" : 2.25,
-            "TP*" : 0.75,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "ETRS302",
-        "module" : "Ordinateurs & Réseaux",
-        "titre_long" : "Réseaux informatiques et protocoles",
-        "notes" : {
-            "CM_CT" : 2.25,
-            "TP*" : 0.75,
-        }
-    },
-
-    // *** --- ***
-
-    {
-        "option" : true,
-        "titre" : "INFO303",
-        "module" : "PROG.",
-        "titre_long" : "Programmation Impérative",
-        "notes" : {
-            "CM_CT" : 2.25,
-            "TP*" : 0.75,
-        }
-    },
-    {
-        "option" : true,
-        "titre" : "INFO305",
-        "module" : "PROG.",
-        "titre_long" : "Programmation Orientée Objet",
-        "notes" : {
-            "CM_CT" : 2.1,
-            "TP*" : 0.9,
-        }
-    },
-    
-    // *** --- ***
-
-    {
-        "option" : true,
-        "titre" : "ETRS303",
-        "module" : "COMP. PROG.",
-        "titre_long" : "Systèmes Embarqués",
-        "notes" : {
-            "CM_CT" : 2.25,
-            "TP*" : 0.75,
-        }
-    },
-    {
-        "option" : true,
-        "titre" : "ETRS305",
-        "module" : "COMP. PROG.",
-        "titre_long" : "Systèmes Séquentiels",
-        "notes" : {
-            "CM_CT" : 2.25,
-            "TP*" : 0.75,
-        }
-    },
-
-    // *** --- ***
-
-    {
-        "option" : false,
-        "titre" : "ANGL301",
-        "module" : "MODULAIRE",
-        "titre_long" : "Anglais",
-        "notes" : {
-            "TD_Ecrit_Oral*" : 1.8,
-            "TD_Pratique*" : 0.6,
-            "Autonomie*" : 0.6,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "AIPE301",
-        "module" : "MODULAIRE",
-        "titre_long" : "Techniques de Communication Ecrite",
-        "notes" : {
-            "TD*" : 1,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "AIPE302",
-        "module" : "MODULAIRE",
-        "titre_long" : "Techniques de Communication Orale",
-        "notes" : {
-            "TD*" : 1,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "OPTION",
-        "module" : "MODULAIRE",
-        "titre_long" : "Conférences / sport / Autre...",
-        "notes" : {
-            "Note*" : 1,
-        }
-    },
+	{
+		option: false,
+		titre: "MATH103",
+		module: "UAF101 Outils Mathématiques",
+		titre_long: "Mathématiques et applications",
+		notes: {
+			CT: 5.4,
+		},
+	},
+	{
+		option: false,
+		titre: "MATH103_CPT",
+		module: "UAF101 Outils Mathématiques",
+		titre_long: "Mathématiques et applications - Compétences",
+		notes: {
+			"RP*": 0.6,
+		},
+	},
+	{
+		option: false,
+		titre: "ETRS101",
+		module: "UAF102 Sciences du numérique",
+		titre_long: "Mathématiques pour le numérique 1",
+		notes: {
+			CT: 2.1,
+			"RP*": 0.9,
+		},
+	},
+	{
+		option: false,
+		titre: "ETRS102",
+		module: "UAF102 Sciences du numérique",
+		titre_long: "Systèmes numériques",
+		notes: {
+			CT: 2.1,
+		},
+	},
+	{
+		option: false,
+		titre: "ETRS102_CPT",
+		module: "UAF102 Sciences du numérique",
+		titre_long: "Systèmes numériques - Compétences",
+		notes: {
+			"RP*": 0.9,
+		},
+	},
+	{
+		option: false,
+		titre: "INFO101",
+		module: "UAF103 Informatique",
+		titre_long: "Algorithmique",
+		notes: {
+			CT: 2.1,
+		},
+	},
+	{
+		option: false,
+		titre: "INFO101_CPT",
+		module: "UAF103 Informatique",
+		titre_long: "Algorithmique - Compétences",
+		notes: {
+			"RP*": 0.9,
+		},
+	},
+	{
+		option: false,
+		titre: "INFO102",
+		module: "UAF103 Informatique",
+		titre_long: "Langages du Web 1",
+		notes: {
+			CT: 1.8,
+			"RP*": 1.2,
+		},
+	},
+	{
+		option: true,
+		titre: "ETRS103",
+		module: "UAI104 Projet Interdisciplinaire",
+		titre_long: "Domotique SAE",
+		notes: {
+			"RP*": 6,
+		},
+	},
+	{
+		option: true,
+		titre: "MATH104",
+		module: "UAI104 Mathématiques",
+		titre_long: "Statistique descriptive",
+		notes: {
+			CT: 2.25,
+		},
+	},
+	{
+		option: true,
+		titre: "MATH104_CPT",
+		module: "UAI104 Mathématiques",
+		titre_long: "Statistique descriptive - Compétences",
+		notes: {
+			"RP*": 0.75,
+		},
+	},
+	{
+		option: true,
+		titre: "MATH105",
+		module: "UAI104 Mathématiques",
+		titre_long: "Logique et ensembles",
+		notes: {
+			CT: 2.4,
+		},
+	},
+	{
+		option: true,
+		titre: "MATH105_CPT",
+		module: "UAI104 Mathématiques",
+		titre_long: "Logique et ensembles - Compétences",
+		notes: {
+			"RP*": 0.6,
+		},
+	},
+	{
+		option: false,
+		titre: "ANGL101",
+		module: "UAM105 Modulaire",
+		titre_long: "Anglais",
+		notes: {
+			CT: 3,
+		},
+	},
+	{
+		option: false,
+		titre: "AIPE101",
+		module: "UAM105 Modulaire",
+		titre_long: "Méthodologie du travail universitaire",
+		notes: {
+			"RP*": 1,
+		},
+	},
+	{
+		option: false,
+		titre: "AIPE102",
+		module: "UAM105 Modulaire",
+		titre_long: "Intégration à la vie universitaire",
+		notes: {
+			"RP*": 1,
+		},
+	},
+	{
+		option: true,
+		titre: "OUVERTURE_S1",
+		module: "UAM105 Modulaire",
+		titre_long: "Enseignements d'ouverture",
+		notes: {
+			"RP**": 1,
+		},
+	},
 ];
 
 const S2 = [
-    {
-        "option" : false,
-        "titre" : "INFO402",
-        "module" : "POO_DATA",
-        "titre_long" : "Programation Orientée Objet 2",
-        "notes" : {
-            "CM_CT" : 2.1,
-            "TP*": 0.9,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "INFO410",
-        "module" : "POO_DATA",
-        "titre_long" : "Structure de Données Classiques",
-        "notes" : {
-            "CM_CT" : 2.1,
-            "TP*": 0.9,
-        }
-    },
-
-    // *** --- ***
-
-    {
-        "option" : false,
-        "titre" : "INFO403",
-        "module" : "C_MAT",
-        "titre_long" : "Programation C",
-        "notes" : {
-            "CM_CT" : 2.1,
-            "TP*": 0.9,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "ETRS401",
-        "module" : "C_MAT",
-        "titre_long" : "introduction télécom",
-        "notes" : {
-            "CM_CT" : 2.25,
-            "TP*": 0.75,
-        }
-    },
-
-    // *** --- ***
-
-    {
-        "option" : false,
-        "titre" : "INFO405",
-        "module" : "BDD_PROJ",
-        "titre_long" : "Projet de programmation",
-        "notes" : {
-            "TD_Pratique*" : 2.01,
-            "Soutenance*": 0.99,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "INFO411",
-        "module" : "BDD_PROJ",
-        "titre_long" : "Serveur et technologies WEB",
-        "notes" : {
-            "CM_CT" : 2.1,
-            "TP*": 0.9,
-        }
-    },
-
-    // *** --- ***
-    
-    {
-        "option" : true,
-        "titre" : "INFO406",
-        "module" : "PROG_FONCT",
-        "titre_long" : "Programmation fonctionelle 1",
-        "notes" : {
-            "CM_CTA" : 2.1,
-            "TP*": 0.9,
-        }
-    },
-    {
-        "option" : true,
-        "titre" : "INFO407",
-        "module" : "PROG_FONCT",
-        "titre_long" : "Programmation fonctionelle 2",
-        "notes" : {
-            "CM_Ecrit_Oral*" : 3,
-        }
-    },
-
-    // *** --- ***
-
-    {
-        "option" : true,
-        "titre" : "INFO408",
-        "module" : "LPRO",
-        "titre_long" : "Preparation Licence Pro 1",
-        "notes" : {
-            "CM_CT" : 2.1,
-            "TP*": 0.9,
-        }
-    },
-    {
-        "option" : true,
-        "titre" : "INFO409",
-        "module" : "LPRO",
-        "titre_long" : "Preparation Licence Pro 2",
-        "notes" : {
-            "CM_CT" : 2.1,
-            "TP*": 0.9,
-        }
-    },
-
-    // *** --- ***
-
-    {
-        "option" : false,
-        "titre" : "ANGL401",
-        "module" : "MODULAIRE",
-        "titre_long" : "Anglais",
-        "notes" : {
-            "Oral*" : 2.4,
-            "Autonomie*": 0.6,
-        }
-    },
-    {
-        "option" : false,
-        "titre" : "TEDS402",
-        "module" : "MODULAIRE",
-        "titre_long" : "Enjeux et transition écologique",
-        "notes" : {
-            "CM_CCI*" : 2.1,
-            "TD*": 0.9,
-        }
-    },
+	{
+		option: false,
+		titre: "MATH204",
+		module: "UAF201 Mathématiques pour le numérique",
+		titre_long: "Algèbre 2",
+		notes: {
+			CT: 2.4,
+		},
+	},
+	{
+		option: false,
+		titre: "MATH204_CPT",
+		module: "UAF201 Mathématiques pour le numérique",
+		titre_long: "Algèbre 2 - Compétences",
+		notes: {
+			"RP*": 0.6,
+		},
+	},
+	{
+		option: false,
+		titre: "INFO205",
+		module: "UAF201 Mathématiques pour le numérique",
+		titre_long: "Mathématiques pour le numérique 2",
+		notes: {
+			CT: 2.4,
+			"RP*": 0.6,
+		},
+	},
+	{
+		option: false,
+		titre: "ETRS201",
+		module: "UAF202 Systèmes et Réseaux informatiques",
+		titre_long: "Réseaux informatiques et internet",
+		notes: {
+			CT: 2.1,
+		},
+	},
+	{
+		option: false,
+		titre: "ETRS201_CPT",
+		module: "UAF202 Systèmes et Réseaux informatiques",
+		titre_long: "Réseaux informatiques et internet - Compétences",
+		notes: {
+			"RP*": 0.9,
+		},
+	},
+	{
+		option: false,
+		titre: "INFO201",
+		module: "UAF202 Systèmes et Réseaux informatiques",
+		titre_long: "Systèmes d'exploitation",
+		notes: {
+			CT: 1.8,
+			"RP*": 1.2,
+		},
+	},
+	{
+		option: false,
+		titre: "INFO202",
+		module: "UAF203 Algo et programmation",
+		titre_long: "Programmation et algorithmique",
+		notes: {
+			CT: 1.8,
+			"RP*": 1.2,
+		},
+	},
+	{
+		option: false,
+		titre: "INFO203",
+		module: "UAF203 Algo et programmation",
+		titre_long: "Langages du WEB 2",
+		notes: {
+			CT: 1.5,
+			"RP*": 1.5,
+		},
+	},
+	{
+		option: true,
+		titre: "ETRS202",
+		module: "UAI204 Parcours INFO/SPI",
+		titre_long: "Electronique programmable",
+		notes: {
+			CT: 2.25,
+			"RP*": 0.75,
+		},
+	},
+	{
+		option: true,
+		titre: "INFO204_CPT",
+		module: "UAI204 Parcours INFO/SPI",
+		titre_long: "Projet multi disciplinaire - Compétences",
+		notes: {
+			"RP*": 3,
+		},
+	},
+	{
+		option: true,
+		titre: "ETRS202_MATH",
+		module: "UAI204 Parcours MATHS",
+		titre_long: "Electronique programmable",
+		notes: {
+			CT: 2.25,
+			"RP*": 0.75,
+		},
+	},
+	{
+		option: true,
+		titre: "MATH202",
+		module: "UAI204 Parcours MATHS",
+		titre_long: "Analyse",
+		notes: {
+			CT: 2.4,
+		},
+	},
+	{
+		option: true,
+		titre: "MATH202_CPT",
+		module: "UAI204 Parcours MATHS",
+		titre_long: "Analyse - Compétences",
+		notes: {
+			"RP*": 0.6,
+		},
+	},
+	{
+		option: false,
+		titre: "ANGL201",
+		module: "UAM205 UA Modulaire",
+		titre_long: "Anglais - Compétences",
+		notes: {
+			CT: 3,
+		},
+	},
+	{
+		option: false,
+		titre: "AIPE201",
+		module: "UAM205 UA Modulaire",
+		titre_long: "Orientation et métiers",
+		notes: {
+			"RP*": 2,
+		},
+	},
+	{
+		option: true,
+		titre: "OUVERTURE_S2",
+		module: "UAM205 UA Modulaire",
+		titre_long: "Enseignements d'ouverture",
+		notes: {
+			"RP**": 1,
+		},
+	},
 ];
 
 // ONLOAD
 
 export function html_onload() {
-    // charge les semestres :
-    loadSemesters(S1, S2)
+	// charge les semestres :
+	loadSemesters(S1, S2);
 }
 
 window.addEventListener("DOMContentLoaded", html_onload);

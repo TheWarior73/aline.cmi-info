@@ -48,12 +48,12 @@
 
         <!-- INFO NEW 2025-2026 -->
 
-        <div class="info">
-            <h2>Calculateur 2025-2026 maintenant en ligne !</h2>
+        <div class="error">
+            <h2>Calculateur 2026-2027 maintenant en ligne !</h2>
             <p>
-                Le calculateur as été mis à jour avec les coefficients de l'année universitaire 2025-2026 pour la L1 et L2 !
+                Le calculateur as été mis à jour avec les coefficients de l'année universitaire 2036-2027 pour la L1 et L3 !
                 <br>
-                <span>Date: <code>Dec. 15. 2025</code></span>
+                <span>Date: <code>Oct. 13. 2026</code></span>
             </p>
         </div>
 
@@ -65,12 +65,12 @@
         <!-- Caché pour l'instant, WIP revenez + tard :3 -->
         <h2 id="pagesNav"><a href="./L2">Licence 2</a></h2>
         <p>
-            Calcul semestres 1 et 2 de la seconde année
+            Calcul semestres 1 et 2 de la seconde année <span>PAS A JOUR</span>
         </p>
 
-        <h2 id="pagesNav"><a href="#">Licence 3</a></h2>
+        <h2 id="pagesNav"><a href="./L3">Licence 3</a></h2>
         <p>
-            Calcul semestres 1 et 2 de la troisième année. Actuellement désactivé. On as pas calculé les coefs :3
+            Calcul semestres 1 et 2 de la troisième année.
         </p>
 
         <h2>La suite plus tard (Soon™)</h2>
