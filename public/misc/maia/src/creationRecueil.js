@@ -24,17 +24,21 @@ function createDesc(recueil, parent) {
 }
 
 function parseContent(content, parent) {
-    const p = createNode("p", "", "", parent)
+    content = content.replace(/^\s*\n/, ""); // removes leading \n (artifact from the Human Readable Data Driven Implementation)
 
-    content.split('\n').forEach((line, index, arr) => {
-        p.appendChild(document.createTextNode(line))
-        if (line != "") {
-            if (index < arr.length -1) {
-                createNode("br", "", "", p)
+    const d = createNode("div", "", "", parent)
+    content.split(/\n\s*\n/).forEach(paragraph => {
+        const p = createNode("p", "", "", d);
+
+        paragraph.split('\n').forEach((line, index, arr) => {
+            p.appendChild(document.createTextNode(line));
+
+            if (index < arr.length - 1) {
+                createNode("br", "", "", p);
             }
-        }
-    })
-    return p
+        });
+    });
+    return d 
 }
 
 function addInfo(note, parent) {
@@ -45,6 +49,10 @@ function addInfo(note, parent) {
 
 function addNew(parent) {
     createNode("newPoem", "", "", parent)
+}
+
+function addSeparator(parent) {
+    createNode("div", "separator", "", parent)
 }
 
 /**
@@ -61,6 +69,10 @@ function createPoem(poemObject, parent) {
     // New ?
     if (poemObject.new) {
         addNew(poem)
+    }
+
+    if(poemObject.separator) {
+        addSeparator(parent)
     }
 
     // Desc
@@ -85,6 +97,7 @@ function createPoem(poemObject, parent) {
 
     // Content
     let content = parseContent(poemObject.content, poem)
+    console.log(content)
 }
 
 export function createRecueil(recueil) {

@@ -163,6 +163,7 @@ const recueil = {
             "author": "Maia",
             "title": "zizi ensoleillé",
             "date": "10/11/2024",
+            "separator": true, // --------------------------------------------------------------------------------
             "content":
             `
                 Zizi…
@@ -185,7 +186,7 @@ const recueil = {
             "author": "Dorian",
             "title": "untitled",
             "date": "16/01/2026",
-            "new":true,
+            "new":false,
             "content":
             `
                 Ses cobras, elle les range par là
@@ -198,7 +199,7 @@ const recueil = {
             "author": "Maia",
             "title": "untitled",
             "date": "16/01/2026",
-            "new":true,
+            "new":false,
             "content":
             `
                 Mon cobra intergalactique
@@ -215,7 +216,7 @@ const recueil = {
             "title": "untitled",
             "date": "16/01/2026",
             "note": "Réponse au précédent poem",
-            "new":true,
+            "new":false,
             "content":
             `
                 Il sussure à ton oreille
@@ -230,7 +231,8 @@ const recueil = {
             "title": "untitled",
             "date": "16/01/2026",
             "note": "Réponse au précédent poem",
-            "new":true,
+            "new": false,
+            "separator": true, // --------------------------------------------------------------------------------
             "content":
             `
                 Personne le satisfera
@@ -241,6 +243,113 @@ const recueil = {
                 Ceci n'est qu'un kink
                 Touchez le si vous voulez
                 Touchez le si vous êtes digne
+            `
+        },
+        {
+            "author": "Maia",
+            "title": "Can ma Dice",
+            "date": "11/10/2026",
+            // "note": "",
+            "new":true,
+            "content":
+            `
+                Je vois une fissure dans notre avenir
+                Je vois une blessure en devenir
+                Elle est trop occupée à Can ma Dice
+                Elle est trop fachée, elle est une zéro sur dix
+
+                Mon cobra est la couleur de ses mèches violettes
+                Je la guette de haut en bas
+                De Montenegro à Cuba
+                Jusqu'à ce qu'elle touche ma qequette
+
+                Poilue ou fripée
+                Tordue ou courbée
+                Missionary ou Cowgirl
+                je change de team comme Gallagher
+
+                Plus jamais mon cobra ne sera seul
+                Allez ferme ta gueule
+            `
+        },
+        {
+            "author": "Maia",
+            "title": "Choisit ton combatant",
+            "date": "11/10/2026",
+            // "note": "",
+            // "separator": false,
+            "new":true,
+            "content":
+            `
+                De pierre ou de terre
+                Mon cobra n'as jamais été aussi deter
+                Pisser debout, pisser en l'air
+                Pisser assis, il nous fait des jets à la vitesse de la lumière
+
+                Impressioné je sais que tu l'est
+                Devant sa silouhette éthérée
+                De Bogota en Érythrée
+                Tel un bon tente de la traverser
+
+                Choisi ton synonyme, choisi ton combattant
+                Cobra, zizi, Kentuky
+                Tout attaquera
+                Ton cul transpersera
+
+                Il fera mouche
+                Tel un javelot
+                Toi tu te touche
+                J'exhibe le beau
+            `
+        },
+        {
+            "author": "Maia",
+            "title": "La conquête de la qequette",
+            "date": "11/10/2026",
+            // "note": "",
+            // "separator": false,
+            "new":true,
+            "content":
+            `
+                Roméo et Juliette
+                Les princes héritiers de la qequette
+                Tout deux poursuivent leur quête
+                Tout doux est le poids de la bête
+
+                C'est entre une ou deux pirouettes
+                Qu'ils font dresser sa couette
+                Droite devant eux elle est nette
+                Elle attire les miettes
+
+                Elle s'arrondit la rondelle
+                Elle lève son bbl
+            `
+        },
+        {
+            "author": "Maia",
+            "title": "Léonie Brejneva",
+            "date": "11/10/2026",
+            // "note": "",
+            // "separator": false,
+            "new":true,
+            "content":
+            `
+                Tête d'or
+                Oh qu'est ce que j'adore
+                Le chambala de Maia
+                Il me fait penser à Léonie Brejneva
+
+                Léonie
+                Je donnerais tout pour goûter à ton Kentuky
+                Je renierais ma patrie, mon sol et mes ancêtres
+                Juste pour te bend contre la fenêtre
+
+
+
+                Gabriel Attal
+                Gabriel j'ai mal
+                Gabriel attirail
+                Gabriel je te mitraille
             `
         },
     ]
